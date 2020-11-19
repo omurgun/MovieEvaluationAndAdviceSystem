@@ -52,11 +52,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IAdminDal.cs" />
-    <Compile Include="Abstract\IEntityRepository.cs" />
     <Compile Include="Abstract\IMovieCategoryDal.cs" />
     <Compile Include="Abstract\IMovieDal.cs" />
     <Compile Include="Abstract\IUserDal.cs" />
-    <Compile Include="Concrete\EntityFramework\EfEntityRepositoryBase.cs" />
+    <Compile Include="Concrete\EntityFramework\EfAdminDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfMovieCategoryDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfMovieDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfUserDal.cs" />
     <Compile Include="Concrete\EntityFramework\MovieContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -65,6 +67,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MEAAS.Core\MEAAS.Core.csproj">
+      <Project>{842D254F-F62A-4970-AAEE-497A51B4999D}</Project>
+      <Name>MEAAS.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MEAAS.Entities\MEAAS.Entities.csproj">
       <Project>{66AB09C2-5C74-47AF-90F6-E6CC37CEAAD4}</Project>
       <Name>MEAAS.Entities</Name>

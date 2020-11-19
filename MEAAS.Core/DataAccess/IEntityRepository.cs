@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MEAAS.Entities.Abstract;
 
-namespace MEAAS.DataAccess.Abstract
+namespace MEAAS.Core.DataAccess
 {
     public interface IEntityRepository<T> where T:class,IEntity,new()
     {

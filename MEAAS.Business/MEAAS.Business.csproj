@@ -41,11 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IAdminService.cs" />
+    <Compile Include="Abstract\IMovieCategoryService.cs" />
+    <Compile Include="Abstract\IMovieService.cs" />
+    <Compile Include="Abstract\IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Abstract\" />
     <Folder Include="Concrete\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MEAAS.Entities\MEAAS.Entities.csproj">
+      <Project>{66AB09C2-5C74-47AF-90F6-E6CC37CEAAD4}</Project>
+      <Name>MEAAS.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

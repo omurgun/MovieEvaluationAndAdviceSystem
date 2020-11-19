@@ -5,10 +5,9 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using MEAAS.DataAccess.Abstract;
 using MEAAS.Entities.Abstract;
 
-namespace MEAAS.DataAccess.Concrete.EntityFramework
+namespace MEAAS.Core.DataAccess.EntityFramework
 {
     public class EfEntityRepositoryBase<TEntity, TContext> : IEntityRepository<TEntity>
         where TEntity : class, IEntity, new()
