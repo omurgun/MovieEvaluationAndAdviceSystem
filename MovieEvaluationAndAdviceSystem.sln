@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1062
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEAAS.Core", "MEAAS.Core\MEAAS.Core.csproj", "{842D254F-F62A-4970-AAEE-497A51B4999D}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEAAS.Entities", "MEAAS.Entities\MEAAS.Entities.csproj", "{66AB09C2-5C74-47AF-90F6-E6CC37CEAAD4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEAAS.WindowsFormsUI", "MEAAS.WindowsFormsUI\MEAAS.WindowsFormsUI.csproj", "{94E846E9-E172-48D2-B8BF-005B6633940D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEASS.ConsoleUI", "MEASS.ConsoleUI\MEASS.ConsoleUI.csproj", "{15DA7095-DF5D-49CB-B2EA-72A53C2852D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{94E846E9-E172-48D2-B8BF-005B6633940D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94E846E9-E172-48D2-B8BF-005B6633940D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94E846E9-E172-48D2-B8BF-005B6633940D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15DA7095-DF5D-49CB-B2EA-72A53C2852D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15DA7095-DF5D-49CB-B2EA-72A53C2852D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15DA7095-DF5D-49CB-B2EA-72A53C2852D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15DA7095-DF5D-49CB-B2EA-72A53C2852D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

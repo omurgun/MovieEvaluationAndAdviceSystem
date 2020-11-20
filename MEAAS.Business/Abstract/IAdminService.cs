@@ -10,8 +10,8 @@ namespace MEAAS.Business.Abstract
     public interface IAdminService
     {
         List<Admin> GetAllAdmins();
-        Admin GetUserByAdminName(string adminName);
-        Admin GetUserByAdminNameAndPassword(string adminName, string password);
+        Admin GetAdminByAdminName(string adminName);
+        Admin GetAdminByAdminNameAndPassword(string adminName, string password);
         Admin AddAdmin(Admin admin);
         Admin UpdateAdmin(Admin admin);
         void DeleteAdmin(Admin admin);

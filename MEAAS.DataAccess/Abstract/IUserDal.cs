@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MEAAS.Core.DataAccess;
 using MEAAS.Entities.Concrete;
 
 namespace MEAAS.DataAccess.Abstract
 {
-    interface IUserDal:IEntityRepository<User>
+    public interface IUserDal:IEntityRepository<User>
     {
+
     }
 }

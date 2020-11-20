@@ -10,7 +10,7 @@ namespace MEAAS.Business.Abstract
     public interface IMovieService
     {
         List<Movie> GetAllMovies();
-        Movie GetUserByMovieName(string movieName);
+        Movie GetMovieByMovieName(string movieName);
         Movie AddMovie(Movie movie);
         Movie UpdateMovie(Movie movie);
         void DeleteMovie(Movie movie);
