@@ -11,10 +11,39 @@ namespace MEASS.ConsoleUI.AdminModule
 {
     public class AdminClass
     {
-        public readonly IAdminService _adminService = InstanceFactory.GetInstance<IAdminService>();
-        public readonly IUserService _userService = InstanceFactory.GetInstance<IUserService>();
+        private readonly IAdminService _adminService = InstanceFactory.GetInstance<IAdminService>();
+        private readonly IUserService _userService = InstanceFactory.GetInstance<IUserService>();
 
-        public void AdminMenu()
+        
+        public void AdminLoginRegisterMenu()
+        {
+            Console.WriteLine("\t\t\tWelcome Admin Login - Register Panel");
+            Console.WriteLine("1- Login");
+            Console.WriteLine("2- Back To Main Menu");
+            Console.WriteLine("0- Exit");
+
+            Console.Write("please choose (0-2): ");
+            var choice = Convert.ToInt32(Console.ReadLine());
+
+            switch (choice)
+            {
+                case 0:
+                    Environment.Exit(0);
+                    break;
+                case 1:
+                    Console.Clear();
+                    AdminLogin();
+                    break;
+                case 2:
+                    Console.Clear();
+                    Program.MainMenu();
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice!");
+                    break;
+            }
+        }
+        private void AdminMenu()
         {
             Console.WriteLine("\t\t\tWelcome Admin Panel");
             Console.WriteLine("1- Add User");
@@ -54,34 +83,6 @@ namespace MEASS.ConsoleUI.AdminModule
                     GetAllUsersUi();
                     break;
                 case 6:
-                    Console.Clear();
-                    Program.MainMenu();
-                    break;
-                default:
-                    Console.WriteLine("Invalid choice!");
-                    break;
-            }
-        }
-        public void AdminLoginRegisterMenu()
-        {
-            Console.WriteLine("\t\t\tWelcome Admin Login - Register Panel");
-            Console.WriteLine("1- Login");
-            Console.WriteLine("2- Back To Main Menu");
-            Console.WriteLine("0- Exit");
-
-            Console.Write("please choose (0-2): ");
-            var choice = Convert.ToInt32(Console.ReadLine());
-
-            switch (choice)
-            {
-                case 0:
-                    Environment.Exit(0);
-                    break;
-                case 1:
-                    Console.Clear();
-                    AdminLogin();
-                    break;
-                case 2:
                     Console.Clear();
                     Program.MainMenu();
                     break;
@@ -138,9 +139,13 @@ namespace MEASS.ConsoleUI.AdminModule
             var firstName = Console.ReadLine();
             Console.Write("Last Name : ");
             var lastName = Console.ReadLine();
-            Console.Write("User Name : ");
+            Console.Write("Email : ");
+            var email = Console.ReadLine();
+            Console.Write("Gender (Male/Female) : ");
+            var gender = Console.ReadLine();
+            Console.Write("Username : ");
             var userName = Console.ReadLine();
-            Console.Write("User Password : ");
+            Console.Write("Password : ");
             var userPassword = Console.ReadLine();
             Console.Clear();
             var user = GetUserByUserName(userName);
@@ -150,6 +155,8 @@ namespace MEASS.ConsoleUI.AdminModule
                 {
                     UserFirstName = firstName,
                     UserLastName = lastName,
+                    UserGender = gender,
+                    UserEmail = email,
                     UserName = userName,
                     UserPassword = userPassword
                 });
@@ -185,16 +192,22 @@ namespace MEASS.ConsoleUI.AdminModule
                 {
                     Console.WriteLine($"First Name : {user.UserFirstName}");
                     Console.WriteLine($"Last Name : {user.UserLastName}");
-                    Console.WriteLine($"User Name : {user.UserName}");
-                    Console.WriteLine($"User Password : {user.UserPassword}");
+                    Console.WriteLine($"Email : {user.UserEmail}");
+                    Console.WriteLine($"Gender : {user.UserGender}");
+                    Console.WriteLine($"Username : {user.UserName}");
+                    Console.WriteLine($"Password : {user.UserPassword}");
 
                     Console.Write("\n\nFirst Name To Update : ");
                     var firstName = Console.ReadLine();
                     Console.Write("Last Name To Update : ");
                     var lastName = Console.ReadLine();
-                    Console.Write("User Name To Update : ");
+                    Console.Write("Email To Update : ");
+                    var email = Console.ReadLine();
+                    Console.Write("Gender To Update (Male/Female) : ");
+                    var gender = Console.ReadLine();
+                    Console.Write("Username To Update : ");
                     var userName = Console.ReadLine();
-                    Console.Write("User Password To Update : ");
+                    Console.Write("Password To Update : ");
                     var userPassword = Console.ReadLine();
                     Console.Clear();
                     UpdateUser(new User
@@ -202,6 +215,8 @@ namespace MEASS.ConsoleUI.AdminModule
                         Id = user.Id,
                         UserFirstName = firstName,
                         UserLastName = lastName,
+                        UserGender = gender,
+                        UserEmail = email,
                         UserName = userName,
                         UserPassword = userPassword
                     });
@@ -254,8 +269,10 @@ namespace MEASS.ConsoleUI.AdminModule
                 {
                     Console.WriteLine($"First Name : {user.UserFirstName}");
                     Console.WriteLine($"Last Name : {user.UserLastName}");
-                    Console.WriteLine($"User Name : {user.UserName}");
-                    Console.WriteLine($"User Password : {user.UserPassword}");
+                    Console.WriteLine($"Email : {user.UserEmail}");
+                    Console.WriteLine($"Gender : {user.UserGender}");
+                    Console.WriteLine($"Username : {user.UserName}");
+                    Console.WriteLine($"Password : {user.UserPassword}"); 
                     MiddleMenu();
                     return user;
                 }
@@ -275,8 +292,10 @@ namespace MEASS.ConsoleUI.AdminModule
             {
                 Console.WriteLine($"First Name : {user.UserFirstName}");
                 Console.WriteLine($"Last Name : {user.UserLastName}");
-                Console.WriteLine($"User Name : {user.UserName}");
-                Console.WriteLine($"User Password : {user.UserPassword}");
+                Console.WriteLine($"Email : {user.UserEmail}");
+                Console.WriteLine($"Gender : {user.UserGender}");
+                Console.WriteLine($"Username : {user.UserName}");
+                Console.WriteLine($"Password : {user.UserPassword}");
                 Console.WriteLine("\n\n");
             }
 

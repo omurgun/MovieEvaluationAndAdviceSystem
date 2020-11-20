@@ -72,9 +72,13 @@ namespace MEASS.ConsoleUI.UserModule
             var firstName = Console.ReadLine();
             Console.Write("Last Name : ");
             var lastName = Console.ReadLine();
-            Console.Write("User Name : ");
+            Console.Write("Email : ");
+            var email = Console.ReadLine();
+            Console.Write("Gender (Male/Female) : ");
+            var gender = Console.ReadLine();
+            Console.Write("Username : ");
             var userName = Console.ReadLine();
-            Console.Write("User Password : ");
+            Console.Write("Password : ");
             var userPassword = Console.ReadLine();
             Console.Clear();
             var user = GetUserByUserName(userName);
@@ -84,6 +88,8 @@ namespace MEASS.ConsoleUI.UserModule
                 {
                     UserFirstName = firstName,
                     UserLastName = lastName,
+                    UserGender = gender,
+                    UserEmail = email,
                     UserName = userName,
                     UserPassword = userPassword
                 });
