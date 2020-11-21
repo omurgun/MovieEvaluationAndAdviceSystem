@@ -64,6 +64,15 @@ namespace MEAAS.WindowsFormsUI.AdminModule
                         if (savedUser != null)
                         {
                             LoadUsers();
+                            tbxFirstName.Text = "";
+                            tbxLastName.Text = "";
+                            tbxEmail.Text = "";
+                            tbxUsername.Text = "";
+                            tbxPassword.Text = "";
+                            rbnMale.Checked = false;
+                            rbnFemale.Checked = false;
+
+
                             MessageBox.Show("new user added.");
                         }
                         else

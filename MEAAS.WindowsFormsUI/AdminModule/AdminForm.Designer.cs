@@ -71,7 +71,7 @@
             // 
             // tbxRemove
             // 
-            this.tbxRemove.Location = new System.Drawing.Point(692, 358);
+            this.tbxRemove.Location = new System.Drawing.Point(677, 306);
             this.tbxRemove.Name = "tbxRemove";
             this.tbxRemove.Size = new System.Drawing.Size(88, 29);
             this.tbxRemove.TabIndex = 14;
@@ -163,9 +163,9 @@
             this.gbxUpdate.Controls.Add(this.lblUpdateLastName);
             this.gbxUpdate.Controls.Add(this.tbxUpdateLastName);
             this.gbxUpdate.Controls.Add(this.btnUpdate);
-            this.gbxUpdate.Location = new System.Drawing.Point(260, 203);
+            this.gbxUpdate.Location = new System.Drawing.Point(260, 200);
             this.gbxUpdate.Name = "gbxUpdate";
-            this.gbxUpdate.Size = new System.Drawing.Size(256, 355);
+            this.gbxUpdate.Size = new System.Drawing.Size(250, 350);
             this.gbxUpdate.TabIndex = 13;
             this.gbxUpdate.TabStop = false;
             this.gbxUpdate.Text = "Update User";
@@ -297,9 +297,9 @@
             this.gbxAdd.Controls.Add(this.lblUsername);
             this.gbxAdd.Controls.Add(this.lblSurname);
             this.gbxAdd.Controls.Add(this.tbxLastName);
-            this.gbxAdd.Location = new System.Drawing.Point(-2, 203);
+            this.gbxAdd.Location = new System.Drawing.Point(5, 200);
             this.gbxAdd.Name = "gbxAdd";
-            this.gbxAdd.Size = new System.Drawing.Size(256, 355);
+            this.gbxAdd.Size = new System.Drawing.Size(250, 350);
             this.gbxAdd.TabIndex = 12;
             this.gbxAdd.TabStop = false;
             this.gbxAdd.Text = "Add New User";
@@ -371,9 +371,9 @@
             // 
             this.dgwUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgwUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwUsers.Location = new System.Drawing.Point(-2, 0);
+            this.dgwUsers.Location = new System.Drawing.Point(0, 0);
             this.dgwUsers.Name = "dgwUsers";
-            this.dgwUsers.Size = new System.Drawing.Size(782, 197);
+            this.dgwUsers.Size = new System.Drawing.Size(765, 200);
             this.dgwUsers.TabIndex = 11;
             this.dgwUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwProducts_CellClick);
             // 
@@ -381,16 +381,16 @@
             // 
             this.gbxSearch.Controls.Add(this.tbxSearch);
             this.gbxSearch.Controls.Add(this.lblSearch);
-            this.gbxSearch.Location = new System.Drawing.Point(535, 203);
+            this.gbxSearch.Location = new System.Drawing.Point(515, 200);
             this.gbxSearch.Name = "gbxSearch";
-            this.gbxSearch.Size = new System.Drawing.Size(245, 131);
+            this.gbxSearch.Size = new System.Drawing.Size(250, 100);
             this.gbxSearch.TabIndex = 32;
             this.gbxSearch.TabStop = false;
             this.gbxSearch.Text = "Search By Username";
             // 
             // tbxSearch
             // 
-            this.tbxSearch.Location = new System.Drawing.Point(72, 61);
+            this.tbxSearch.Location = new System.Drawing.Point(73, 48);
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.Size = new System.Drawing.Size(156, 20);
             this.tbxSearch.TabIndex = 2;
@@ -399,7 +399,7 @@
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(19, 64);
+            this.lblSearch.Location = new System.Drawing.Point(20, 51);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(47, 13);
             this.lblSearch.TabIndex = 1;
@@ -409,14 +409,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 642);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(766, 600);
             this.Controls.Add(this.gbxSearch);
             this.Controls.Add(this.tbxRemove);
             this.Controls.Add(this.gbxUpdate);
             this.Controls.Add(this.gbxAdd);
             this.Controls.Add(this.dgwUsers);
             this.Name = "AdminForm";
-            this.Text = "Admin Panel";
+            this.Text = "Admin-User Panel";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.gbxUpdate.ResumeLayout(false);
             this.gbxUpdate.PerformLayout();

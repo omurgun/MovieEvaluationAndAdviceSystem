@@ -1,18 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MEAAS.Business.Abstract;
 using MEAAS.Business.DependencyResolvers.Ninject;
-using MEAAS.WindowsFormsUI.AdminModule;
-using MEAAS.WindowsFormsUI.UserModule;
+using MEAAS.WindowsFormsUI.HomeModule;
 
-namespace MEAAS.WindowsFormsUI.HomeModule
+namespace MEAAS.WindowsFormsUI.UserModule
 {
     public partial class UserLoginForm : Form
     {

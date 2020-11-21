@@ -1,5 +1,5 @@
 ﻿
-namespace MEAAS.WindowsFormsUI.HomeModule
+namespace MEAAS.WindowsFormsUI.AdminModule
 {
     partial class AdminLoginForm
     {
@@ -139,6 +139,7 @@ namespace MEAAS.WindowsFormsUI.HomeModule
             this.MaximizeBox = false;
             this.Name = "AdminLoginForm";
             this.Text = "AdminLoginForm";
+            this.Load += new System.EventHandler(this.AdminLoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

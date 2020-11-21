@@ -1,5 +1,5 @@
 ﻿
-namespace MEAAS.WindowsFormsUI.HomeModule
+namespace MEAAS.WindowsFormsUI.UserModule
 {
     partial class UserLoginForm
     {

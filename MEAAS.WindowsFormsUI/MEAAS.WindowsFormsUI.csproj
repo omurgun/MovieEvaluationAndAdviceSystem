@@ -62,10 +62,10 @@
     <Compile Include="AdminModule\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomeModule\AdminLoginForm.cs">
+    <Compile Include="AdminModule\AdminLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomeModule\AdminLoginForm.Designer.cs">
+    <Compile Include="AdminModule\AdminLoginForm.Designer.cs">
       <DependentUpon>AdminLoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="HomeModule\HomeForm.cs">
@@ -74,16 +74,16 @@
     <Compile Include="HomeModule\HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomeModule\UserLoginForm.cs">
+    <Compile Include="UserModule\UserLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomeModule\UserLoginForm.Designer.cs">
+    <Compile Include="UserModule\UserLoginForm.Designer.cs">
       <DependentUpon>UserLoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomeModule\UserRegisterForm.cs">
+    <Compile Include="UserModule\UserRegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomeModule\UserRegisterForm.Designer.cs">
+    <Compile Include="UserModule\UserRegisterForm.Designer.cs">
       <DependentUpon>UserRegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -97,16 +97,16 @@
     <EmbeddedResource Include="AdminModule\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeModule\AdminLoginForm.resx">
+    <EmbeddedResource Include="AdminModule\AdminLoginForm.resx">
       <DependentUpon>AdminLoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeModule\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeModule\UserLoginForm.resx">
+    <EmbeddedResource Include="UserModule\UserLoginForm.resx">
       <DependentUpon>UserLoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeModule\UserRegisterForm.resx">
+    <EmbeddedResource Include="UserModule\UserRegisterForm.resx">
       <DependentUpon>UserRegisterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
