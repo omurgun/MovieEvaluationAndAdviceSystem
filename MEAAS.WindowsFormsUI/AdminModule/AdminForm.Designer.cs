@@ -1,6 +1,6 @@
-﻿namespace MEAAS.WindowsFormsUI
+﻿namespace MEAAS.WindowsFormsUI.AdminModule
 {
-    partial class Form1
+    partial class AdminForm
     {
         /// <summary>
         /// Required designer variable.
@@ -38,15 +38,6 @@
             this.tbxLastName = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.gbxUpdate = new System.Windows.Forms.GroupBox();
-            this.gbxAdd = new System.Windows.Forms.GroupBox();
-            this.tbxPassword = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblGender = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbxEmail = new System.Windows.Forms.TextBox();
-            this.dgwUsers = new System.Windows.Forms.DataGridView();
-            this.rbnMale = new System.Windows.Forms.RadioButton();
-            this.rbnFemale = new System.Windows.Forms.RadioButton();
             this.rbnUpdateFemale = new System.Windows.Forms.RadioButton();
             this.rbnUpdateMale = new System.Windows.Forms.RadioButton();
             this.tbxUpdatePassword = new System.Windows.Forms.TextBox();
@@ -60,14 +51,27 @@
             this.lblUpdateUserName = new System.Windows.Forms.Label();
             this.lblUpdateLastName = new System.Windows.Forms.Label();
             this.tbxUpdateLastName = new System.Windows.Forms.TextBox();
+            this.gbxAdd = new System.Windows.Forms.GroupBox();
+            this.rbnFemale = new System.Windows.Forms.RadioButton();
+            this.rbnMale = new System.Windows.Forms.RadioButton();
+            this.tbxPassword = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblGender = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbxEmail = new System.Windows.Forms.TextBox();
+            this.dgwUsers = new System.Windows.Forms.DataGridView();
+            this.gbxSearch = new System.Windows.Forms.GroupBox();
+            this.tbxSearch = new System.Windows.Forms.TextBox();
+            this.lblSearch = new System.Windows.Forms.Label();
             this.gbxUpdate.SuspendLayout();
             this.gbxAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUsers)).BeginInit();
+            this.gbxSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbxRemove
             // 
-            this.tbxRemove.Location = new System.Drawing.Point(743, 331);
+            this.tbxRemove.Location = new System.Drawing.Point(692, 358);
             this.tbxRemove.Name = "tbxRemove";
             this.tbxRemove.Size = new System.Drawing.Size(88, 29);
             this.tbxRemove.TabIndex = 14;
@@ -165,102 +169,6 @@
             this.gbxUpdate.TabIndex = 13;
             this.gbxUpdate.TabStop = false;
             this.gbxUpdate.Text = "Update User";
-            // 
-            // gbxAdd
-            // 
-            this.gbxAdd.Controls.Add(this.rbnFemale);
-            this.gbxAdd.Controls.Add(this.rbnMale);
-            this.gbxAdd.Controls.Add(this.tbxPassword);
-            this.gbxAdd.Controls.Add(this.label3);
-            this.gbxAdd.Controls.Add(this.lblGender);
-            this.gbxAdd.Controls.Add(this.label1);
-            this.gbxAdd.Controls.Add(this.tbxEmail);
-            this.gbxAdd.Controls.Add(this.btnAddUser);
-            this.gbxAdd.Controls.Add(this.lblName);
-            this.gbxAdd.Controls.Add(this.tbxUsername);
-            this.gbxAdd.Controls.Add(this.tbxFirstName);
-            this.gbxAdd.Controls.Add(this.lblUsername);
-            this.gbxAdd.Controls.Add(this.lblSurname);
-            this.gbxAdd.Controls.Add(this.tbxLastName);
-            this.gbxAdd.Location = new System.Drawing.Point(-2, 203);
-            this.gbxAdd.Name = "gbxAdd";
-            this.gbxAdd.Size = new System.Drawing.Size(256, 355);
-            this.gbxAdd.TabIndex = 12;
-            this.gbxAdd.TabStop = false;
-            this.gbxAdd.Text = "Add New User";
-            // 
-            // tbxPassword
-            // 
-            this.tbxPassword.Location = new System.Drawing.Point(133, 270);
-            this.tbxPassword.Name = "tbxPassword";
-            this.tbxPassword.Size = new System.Drawing.Size(100, 20);
-            this.tbxPassword.TabIndex = 14;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 270);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Password";
-            // 
-            // lblGender
-            // 
-            this.lblGender.AutoSize = true;
-            this.lblGender.Location = new System.Drawing.Point(36, 174);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(42, 13);
-            this.lblGender.TabIndex = 11;
-            this.lblGender.Text = "Gender";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 136);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Email";
-            // 
-            // tbxEmail
-            // 
-            this.tbxEmail.Location = new System.Drawing.Point(133, 133);
-            this.tbxEmail.Name = "tbxEmail";
-            this.tbxEmail.Size = new System.Drawing.Size(100, 20);
-            this.tbxEmail.TabIndex = 10;
-            // 
-            // dgwUsers
-            // 
-            this.dgwUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgwUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwUsers.Location = new System.Drawing.Point(-2, 0);
-            this.dgwUsers.Name = "dgwUsers";
-            this.dgwUsers.Size = new System.Drawing.Size(823, 197);
-            this.dgwUsers.TabIndex = 11;
-            this.dgwUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwProducts_CellClick);
-            // 
-            // rbnMale
-            // 
-            this.rbnMale.AutoSize = true;
-            this.rbnMale.Location = new System.Drawing.Point(133, 174);
-            this.rbnMale.Name = "rbnMale";
-            this.rbnMale.Size = new System.Drawing.Size(48, 17);
-            this.rbnMale.TabIndex = 15;
-            this.rbnMale.TabStop = true;
-            this.rbnMale.Text = "Male";
-            this.rbnMale.UseVisualStyleBackColor = true;
-            // 
-            // rbnFemale
-            // 
-            this.rbnFemale.AutoSize = true;
-            this.rbnFemale.Location = new System.Drawing.Point(187, 174);
-            this.rbnFemale.Name = "rbnFemale";
-            this.rbnFemale.Size = new System.Drawing.Size(59, 17);
-            this.rbnFemale.TabIndex = 16;
-            this.rbnFemale.TabStop = true;
-            this.rbnFemale.Text = "Female";
-            this.rbnFemale.UseVisualStyleBackColor = true;
             // 
             // rbnUpdateFemale
             // 
@@ -373,16 +281,141 @@
             this.tbxUpdateLastName.Size = new System.Drawing.Size(100, 20);
             this.tbxUpdateLastName.TabIndex = 20;
             // 
-            // Form1
+            // gbxAdd
+            // 
+            this.gbxAdd.Controls.Add(this.rbnFemale);
+            this.gbxAdd.Controls.Add(this.rbnMale);
+            this.gbxAdd.Controls.Add(this.tbxPassword);
+            this.gbxAdd.Controls.Add(this.label3);
+            this.gbxAdd.Controls.Add(this.lblGender);
+            this.gbxAdd.Controls.Add(this.label1);
+            this.gbxAdd.Controls.Add(this.tbxEmail);
+            this.gbxAdd.Controls.Add(this.btnAddUser);
+            this.gbxAdd.Controls.Add(this.lblName);
+            this.gbxAdd.Controls.Add(this.tbxUsername);
+            this.gbxAdd.Controls.Add(this.tbxFirstName);
+            this.gbxAdd.Controls.Add(this.lblUsername);
+            this.gbxAdd.Controls.Add(this.lblSurname);
+            this.gbxAdd.Controls.Add(this.tbxLastName);
+            this.gbxAdd.Location = new System.Drawing.Point(-2, 203);
+            this.gbxAdd.Name = "gbxAdd";
+            this.gbxAdd.Size = new System.Drawing.Size(256, 355);
+            this.gbxAdd.TabIndex = 12;
+            this.gbxAdd.TabStop = false;
+            this.gbxAdd.Text = "Add New User";
+            // 
+            // rbnFemale
+            // 
+            this.rbnFemale.AutoSize = true;
+            this.rbnFemale.Location = new System.Drawing.Point(187, 174);
+            this.rbnFemale.Name = "rbnFemale";
+            this.rbnFemale.Size = new System.Drawing.Size(59, 17);
+            this.rbnFemale.TabIndex = 16;
+            this.rbnFemale.TabStop = true;
+            this.rbnFemale.Text = "Female";
+            this.rbnFemale.UseVisualStyleBackColor = true;
+            // 
+            // rbnMale
+            // 
+            this.rbnMale.AutoSize = true;
+            this.rbnMale.Location = new System.Drawing.Point(133, 174);
+            this.rbnMale.Name = "rbnMale";
+            this.rbnMale.Size = new System.Drawing.Size(48, 17);
+            this.rbnMale.TabIndex = 15;
+            this.rbnMale.TabStop = true;
+            this.rbnMale.Text = "Male";
+            this.rbnMale.UseVisualStyleBackColor = true;
+            // 
+            // tbxPassword
+            // 
+            this.tbxPassword.Location = new System.Drawing.Point(133, 270);
+            this.tbxPassword.Name = "tbxPassword";
+            this.tbxPassword.Size = new System.Drawing.Size(100, 20);
+            this.tbxPassword.TabIndex = 14;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(36, 270);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Password";
+            // 
+            // lblGender
+            // 
+            this.lblGender.AutoSize = true;
+            this.lblGender.Location = new System.Drawing.Point(36, 174);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(42, 13);
+            this.lblGender.TabIndex = 11;
+            this.lblGender.Text = "Gender";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(36, 136);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Email";
+            // 
+            // tbxEmail
+            // 
+            this.tbxEmail.Location = new System.Drawing.Point(133, 133);
+            this.tbxEmail.Name = "tbxEmail";
+            this.tbxEmail.Size = new System.Drawing.Size(100, 20);
+            this.tbxEmail.TabIndex = 10;
+            // 
+            // dgwUsers
+            // 
+            this.dgwUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgwUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwUsers.Location = new System.Drawing.Point(-2, 0);
+            this.dgwUsers.Name = "dgwUsers";
+            this.dgwUsers.Size = new System.Drawing.Size(782, 197);
+            this.dgwUsers.TabIndex = 11;
+            this.dgwUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwProducts_CellClick);
+            // 
+            // gbxSearch
+            // 
+            this.gbxSearch.Controls.Add(this.tbxSearch);
+            this.gbxSearch.Controls.Add(this.lblSearch);
+            this.gbxSearch.Location = new System.Drawing.Point(535, 203);
+            this.gbxSearch.Name = "gbxSearch";
+            this.gbxSearch.Size = new System.Drawing.Size(245, 131);
+            this.gbxSearch.TabIndex = 32;
+            this.gbxSearch.TabStop = false;
+            this.gbxSearch.Text = "Search By Username";
+            // 
+            // tbxSearch
+            // 
+            this.tbxSearch.Location = new System.Drawing.Point(72, 61);
+            this.tbxSearch.Name = "tbxSearch";
+            this.tbxSearch.Size = new System.Drawing.Size(156, 20);
+            this.tbxSearch.TabIndex = 2;
+            this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(19, 64);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(47, 13);
+            this.lblSearch.TabIndex = 1;
+            this.lblSearch.Text = "Search :";
+            // 
+            // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 642);
+            this.Controls.Add(this.gbxSearch);
             this.Controls.Add(this.tbxRemove);
             this.Controls.Add(this.gbxUpdate);
             this.Controls.Add(this.gbxAdd);
             this.Controls.Add(this.dgwUsers);
-            this.Name = "Form1";
+            this.Name = "AdminForm";
             this.Text = "Admin Panel";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.gbxUpdate.ResumeLayout(false);
@@ -390,6 +423,8 @@
             this.gbxAdd.ResumeLayout(false);
             this.gbxAdd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUsers)).EndInit();
+            this.gbxSearch.ResumeLayout(false);
+            this.gbxSearch.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -428,6 +463,9 @@
         private System.Windows.Forms.Label lblUpdateUserName;
         private System.Windows.Forms.Label lblUpdateLastName;
         private System.Windows.Forms.TextBox tbxUpdateLastName;
+        private System.Windows.Forms.GroupBox gbxSearch;
+        private System.Windows.Forms.TextBox tbxSearch;
+        private System.Windows.Forms.Label lblSearch;
     }
 }
 

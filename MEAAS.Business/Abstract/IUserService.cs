@@ -10,6 +10,7 @@ namespace MEAAS.Business.Abstract
     public interface IUserService
     {
         List<User> GetAllUsers();
+        List<User> GetUsersByUserName(string userName);
         User GetUserByUserName(string userName);
         User GetUserByUserNameAndPassword(string userName, string password);
         User AddUser(User user);

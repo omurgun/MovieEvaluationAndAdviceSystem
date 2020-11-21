@@ -1,22 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.Design;
 using MEAAS.Business.Abstract;
 using MEAAS.Business.DependencyResolvers.Ninject;
 using MEAAS.Entities.Concrete;
 
-namespace MEAAS.WindowsFormsUI
+namespace MEAAS.WindowsFormsUI.AdminModule
 {
-    public partial class Form1 : Form
+    public partial class AdminForm : Form
     {
-        public Form1()
+        public AdminForm()
         {
             InitializeComponent();
         }
@@ -194,6 +186,18 @@ namespace MEAAS.WindowsFormsUI
             }
                
             
+        }
+
+        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(tbxSearch.Text))
+            {
+                dgwUsers.DataSource = _userService.GetUsersByUserName(tbxSearch.Text);
+            }
+            else
+            {
+                LoadUsers();
+            }
         }
     }
 }

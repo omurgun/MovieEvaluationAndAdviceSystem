@@ -33,6 +33,11 @@ namespace MEAAS.Business.Concrete.Managers
             return _userDal.GetAll();
         }
 
+        public List<User> GetUsersByUserName(string userName)
+        {
+            return _userDal.GetAll(u => u.UserName.ToLower().Contains(userName.ToLower()));
+        }
+
         public User UpdateUser(User user)
         {
             return _userDal.Update(user);
