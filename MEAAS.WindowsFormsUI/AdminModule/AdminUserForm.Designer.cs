@@ -77,7 +77,7 @@
             this.tbxRemove.TabIndex = 14;
             this.tbxRemove.Text = "Remove";
             this.tbxRemove.UseVisualStyleBackColor = true;
-            this.tbxRemove.Click += new System.EventHandler(this.tbxRemove_Click);
+            this.tbxRemove.Click += new System.EventHandler(this.TbxRemove_Click);
             // 
             // btnAddUser
             // 
@@ -87,7 +87,7 @@
             this.btnAddUser.TabIndex = 8;
             this.btnAddUser.Text = "Add";
             this.btnAddUser.UseVisualStyleBackColor = true;
-            this.btnAddUser.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAddUser.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // lblName
             // 
@@ -145,7 +145,7 @@
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // gbxUpdate
             // 
@@ -375,7 +375,7 @@
             this.dgwUsers.Name = "dgwUsers";
             this.dgwUsers.Size = new System.Drawing.Size(765, 200);
             this.dgwUsers.TabIndex = 11;
-            this.dgwUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwProducts_CellClick);
+            this.dgwUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgwProducts_CellClick);
             // 
             // gbxSearch
             // 
@@ -394,7 +394,7 @@
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.Size = new System.Drawing.Size(156, 20);
             this.tbxSearch.TabIndex = 2;
-            this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
+            this.tbxSearch.TextChanged += new System.EventHandler(this.TbxSearch_TextChanged);
             // 
             // lblSearch
             // 

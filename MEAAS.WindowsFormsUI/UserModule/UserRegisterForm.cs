@@ -43,7 +43,7 @@ namespace MEAAS.WindowsFormsUI.UserModule
 
                 if (firstName == string.Empty || lastName == string.Empty || email == string.Empty || userName == string.Empty || password == string.Empty)
                 {
-                    MessageBox.Show("can't be blank");
+                    MessageBox.Show(@"can't be blank");
                 }
                 else
                 {
@@ -67,12 +67,12 @@ namespace MEAAS.WindowsFormsUI.UserModule
                         }
                         else
                         {
-                            MessageBox.Show("Couldn't add new user!!");
+                            MessageBox.Show(@"Couldn't add new user!!");
                         }
                     }
                     else
                     {
-                        MessageBox.Show("this user has already been added");
+                        MessageBox.Show(@"this user has already been added");
                     }
                 }
 

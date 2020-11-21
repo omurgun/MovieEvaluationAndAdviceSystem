@@ -22,7 +22,7 @@ namespace MEAAS.WindowsFormsUI.UserModule
 
             if (userName == string.Empty || password == string.Empty)
             {
-                MessageBox.Show("can't be blank");
+                MessageBox.Show(@"can't be blank");
             }
             else
             {
@@ -35,7 +35,7 @@ namespace MEAAS.WindowsFormsUI.UserModule
                 }
                 else
                 {
-                    MessageBox.Show("User name or password is incorrect!");
+                    MessageBox.Show(@"User name or password is incorrect!");
                 }
             }
         }

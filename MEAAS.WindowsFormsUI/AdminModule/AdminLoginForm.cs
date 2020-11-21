@@ -22,7 +22,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
 
             if (adminName == string.Empty || password == string.Empty)
             {
-                MessageBox.Show("can't be blank");
+                MessageBox.Show(@"can't be blank");
             }
             else
             {
@@ -37,7 +37,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
                 }
                 else
                 {
-                    MessageBox.Show("Admin name or password is incorrect!");
+                    MessageBox.Show(@"Admin name or password is incorrect!");
                 }
             }
         }

@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEAAS.WindowsFormsUI", "MEA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEASS.ConsoleUI", "MEASS.ConsoleUI\MEASS.ConsoleUI.csproj", "{15DA7095-DF5D-49CB-B2EA-72A53C2852D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEASS.MvcWebUI", "MEASS.MvcWeUI\MEASS.MvcWebUI.csproj", "{B4D28DC4-2777-4075-9532-1C6E686A1611}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{15DA7095-DF5D-49CB-B2EA-72A53C2852D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15DA7095-DF5D-49CB-B2EA-72A53C2852D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15DA7095-DF5D-49CB-B2EA-72A53C2852D1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B4D28DC4-2777-4075-9532-1C6E686A1611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4D28DC4-2777-4075-9532-1C6E686A1611}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4D28DC4-2777-4075-9532-1C6E686A1611}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4D28DC4-2777-4075-9532-1C6E686A1611}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

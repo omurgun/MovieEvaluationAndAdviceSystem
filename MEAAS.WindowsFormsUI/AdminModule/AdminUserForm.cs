@@ -23,7 +23,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             dgwUsers.DataSource = _userService.GetAllUsers();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
 
                 if (firstName == string.Empty || lastName == string.Empty || email == string.Empty || userName == string.Empty || password == string.Empty)
                 {
-                    MessageBox.Show("can't be blank");
+                    MessageBox.Show(@"can't be blank");
                 }
                 else
                 {
@@ -73,16 +73,16 @@ namespace MEAAS.WindowsFormsUI.AdminModule
                             rbnFemale.Checked = false;
 
 
-                            MessageBox.Show("new user added.");
+                            MessageBox.Show(@"new user added.");
                         }
                         else
                         {
-                            MessageBox.Show("Couldn't add new user!!");
+                            MessageBox.Show(@"Couldn't add new user!!");
                         }
                     }
                     else
                     {
-                        MessageBox.Show("this user has already been added");
+                        MessageBox.Show(@"this user has already been added");
                     }
                 }
 
@@ -93,7 +93,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void BtnUpdate_Click(object sender, EventArgs e)
         {
             try
             {
@@ -101,7 +101,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
                 var updateLastName = tbxLastName.Text;
                 var updateEmail = tbxEmail.Text;
                 var updateGender = "";
-                if (rbnMale.Checked == true)
+                if (rbnMale.Checked)
                 {
                     updateGender = "Male";
                 }
@@ -117,7 +117,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
                 if (updateFirstName == string.Empty || updateLastName == string.Empty || updateEmail == string.Empty ||
                     updateUserName == string.Empty || updatePassword == string.Empty)
                 {
-                    MessageBox.Show("can't be blank");
+                    MessageBox.Show(@"can't be blank");
                 }
                 else
                 {
@@ -137,17 +137,17 @@ namespace MEAAS.WindowsFormsUI.AdminModule
                         if (updatedUser != null)
                         {
                             LoadUsers();
-                            MessageBox.Show("user updated.");
+                            MessageBox.Show(@"user updated.");
                         }
                         else
                         {
-                            MessageBox.Show("Couldn't update user!!");
+                            MessageBox.Show(@"Couldn't update user!!");
                         }
 
                     }
                     else
                     {
-                        MessageBox.Show("There is no such user");
+                        MessageBox.Show(@"There is no such user");
                     }
                 }
             }
@@ -158,7 +158,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
         }
 
 
-        private void dgwProducts_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DgwProducts_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgwUsers.CurrentRow != null)
             {
@@ -178,7 +178,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
                 }
             }
         }
-        private void tbxRemove_Click(object sender, EventArgs e)
+        private void TbxRemove_Click(object sender, EventArgs e)
         {
             if (dgwUsers.CurrentRow != null)
             {
@@ -187,17 +187,17 @@ namespace MEAAS.WindowsFormsUI.AdminModule
                     Id = Convert.ToInt32(dgwUsers.CurrentRow.Cells[0].Value)
                 });
                 LoadUsers();
-                MessageBox.Show("User Deleted!");
+                MessageBox.Show(@"User Deleted!");
             }
             else
             {
-                MessageBox.Show("Please Select User!");
+                MessageBox.Show(@"Please Select User!");
             }
                
             
         }
 
-        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        private void TbxSearch_TextChanged(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(tbxSearch.Text))
             {
