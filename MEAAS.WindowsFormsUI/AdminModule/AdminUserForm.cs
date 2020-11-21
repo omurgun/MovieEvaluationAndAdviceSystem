@@ -6,9 +6,9 @@ using MEAAS.Entities.Concrete;
 
 namespace MEAAS.WindowsFormsUI.AdminModule
 {
-    public partial class AdminForm : Form
+    public partial class AdminUserForm : Form
     {
-        public AdminForm()
+        public AdminUserForm()
         {
             InitializeComponent();
         }

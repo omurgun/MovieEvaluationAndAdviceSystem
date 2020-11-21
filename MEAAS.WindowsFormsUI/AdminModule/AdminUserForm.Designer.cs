@@ -1,6 +1,6 @@
 ﻿namespace MEAAS.WindowsFormsUI.AdminModule
 {
-    partial class AdminForm
+    partial class AdminUserForm
     {
         /// <summary>
         /// Required designer variable.
@@ -71,7 +71,7 @@
             // 
             // tbxRemove
             // 
-            this.tbxRemove.Location = new System.Drawing.Point(677, 306);
+            this.tbxRemove.Location = new System.Drawing.Point(677, 310);
             this.tbxRemove.Name = "tbxRemove";
             this.tbxRemove.Size = new System.Drawing.Size(88, 29);
             this.tbxRemove.TabIndex = 14;
@@ -163,7 +163,7 @@
             this.gbxUpdate.Controls.Add(this.lblUpdateLastName);
             this.gbxUpdate.Controls.Add(this.tbxUpdateLastName);
             this.gbxUpdate.Controls.Add(this.btnUpdate);
-            this.gbxUpdate.Location = new System.Drawing.Point(260, 200);
+            this.gbxUpdate.Location = new System.Drawing.Point(260, 205);
             this.gbxUpdate.Name = "gbxUpdate";
             this.gbxUpdate.Size = new System.Drawing.Size(250, 350);
             this.gbxUpdate.TabIndex = 13;
@@ -297,7 +297,7 @@
             this.gbxAdd.Controls.Add(this.lblUsername);
             this.gbxAdd.Controls.Add(this.lblSurname);
             this.gbxAdd.Controls.Add(this.tbxLastName);
-            this.gbxAdd.Location = new System.Drawing.Point(5, 200);
+            this.gbxAdd.Location = new System.Drawing.Point(5, 205);
             this.gbxAdd.Name = "gbxAdd";
             this.gbxAdd.Size = new System.Drawing.Size(250, 350);
             this.gbxAdd.TabIndex = 12;
@@ -381,7 +381,7 @@
             // 
             this.gbxSearch.Controls.Add(this.tbxSearch);
             this.gbxSearch.Controls.Add(this.lblSearch);
-            this.gbxSearch.Location = new System.Drawing.Point(515, 200);
+            this.gbxSearch.Location = new System.Drawing.Point(515, 205);
             this.gbxSearch.Name = "gbxSearch";
             this.gbxSearch.Size = new System.Drawing.Size(250, 100);
             this.gbxSearch.TabIndex = 32;

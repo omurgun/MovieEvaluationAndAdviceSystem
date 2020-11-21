@@ -20,6 +20,12 @@ namespace MEAAS.Business.DependencyResolvers.Ninject
 
             Bind<IAdminService>().To<AdminManager>();
             Bind<IAdminDal>().To<EfAdminDal>();
+
+            Bind<IMovieService>().To<MovieManager>();
+            Bind<IMovieDal>().To<EfMovieDal>();
+
+            Bind<IMovieCategoryService>().To<MovieCategoryManager>();
+            Bind<IMovieCategoryDal>().To<EfMovieCategoryDal>();
         }
     }
 }

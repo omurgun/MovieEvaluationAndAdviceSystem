@@ -11,7 +11,7 @@ namespace MEAAS.Entities.Concrete
     {
         public int Id { get; set; }
         public int MovieCategoryId { get; set; }
-        public string MovieName { get; set; }
+        public string MovieTitle { get; set; }
         public string MovieThumbnail { get; set; }
     }
 }

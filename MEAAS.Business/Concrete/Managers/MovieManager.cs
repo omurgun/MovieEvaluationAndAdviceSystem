@@ -25,7 +25,7 @@ namespace MEAAS.Business.Concrete.Managers
 
         public Movie GetMovieByMovieName(string movieName)
         {
-            return _movieDal.Get(m => m.MovieName.Equals(movieName));
+            return _movieDal.Get(m => m.MovieTitle.Equals(movieName));
         }
 
         public Movie AddMovie(Movie movie)

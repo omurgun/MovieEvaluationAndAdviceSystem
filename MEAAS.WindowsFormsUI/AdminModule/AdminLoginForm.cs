@@ -29,8 +29,10 @@ namespace MEAAS.WindowsFormsUI.AdminModule
                 var admin = _adminService.GetAdminByAdminNameAndPassword(adminName, password);
                 if (admin != null)
                 {
-                    AdminForm adminForm = new AdminForm();
-                    adminForm.Show();
+                    //AdminUserForm adminForm = new AdminUserForm();
+                    //adminForm.Show();
+                    AdminMovieForm adminMovieForm = new AdminMovieForm();
+                    adminMovieForm.Show();
                     this.Hide();
                 }
                 else

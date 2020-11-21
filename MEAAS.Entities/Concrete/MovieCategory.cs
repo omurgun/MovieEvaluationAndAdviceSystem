@@ -9,8 +9,7 @@ namespace MEAAS.Entities.Concrete
 {
     public class MovieCategory:IEntity
     {
-        public int Id { get; set; }
-        public int MovieId { get; set; }
+        public int MovieCategoryId { get; set; }
         public string MovieCategoryName { get; set; }
     }
 }
