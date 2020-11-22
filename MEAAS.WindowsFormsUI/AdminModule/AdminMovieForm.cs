@@ -64,7 +64,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
                 }
                 else
                 {
-                    var movie = _movieService.GetMovieByMovieName(title);
+                    var movie = _movieService.GetMovieByTitle(title);
                     if (movie == null)
                     {
                         var savedMovie = _movieService.AddMovie(new Movie
@@ -113,7 +113,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
                 }
                 else
                 {
-                    var movie = _movieService.GetMovieByMovieName(updateTitle);
+                    var movie = _movieService.GetMovieByTitle(updateTitle);
                     if (movie != null)
                     {
                         if (dgwMovies.CurrentRow != null)
@@ -281,6 +281,30 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             if (dgwMovieCategory.CurrentRow != null)
             {
                 tbxUpdateMovieCategoryName.Text = dgwMovieCategory.CurrentRow.Cells[1].Value.ToString();
+            }
+        }
+
+        private void TbxMovieSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(tbxMovieSearch.Text))
+            {
+                dgwMovies.DataSource = _movieService.GetMoviesByTitle(tbxMovieSearch.Text);
+            }
+            else
+            {
+                LoadMovies();
+            }
+        }
+
+        private void TbxSearchMovieCategory_TextChanged(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(tbxSearchMovieCategory.Text))
+            {
+                dgwMovieCategory.DataSource = _movieCategoryService.GetMovieCategoriesByCategoryName(tbxSearchMovieCategory.Text);
+            }
+            else
+            {
+                LoadMovieCategories();
             }
         }
     }

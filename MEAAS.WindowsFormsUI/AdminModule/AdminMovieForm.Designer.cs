@@ -38,7 +38,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.tbxTitle = new System.Windows.Forms.TextBox();
             this.lblSurname = new System.Windows.Forms.Label();
             this.gbxSearch = new System.Windows.Forms.GroupBox();
-            this.tbxSearch = new System.Windows.Forms.TextBox();
+            this.tbxMovieSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.dgwMovies = new System.Windows.Forms.DataGridView();
             this.gbxUpdate = new System.Windows.Forms.GroupBox();
@@ -50,27 +50,27 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.lblUpdateCategory = new System.Windows.Forms.Label();
             this.btnUpdateMovie = new System.Windows.Forms.Button();
             this.tbxRemoveMovie = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbxAddNewMovieCategory = new System.Windows.Forms.GroupBox();
             this.btnAddMovieCategory = new System.Windows.Forms.Button();
             this.lblMovieCategoryName = new System.Windows.Forms.Label();
             this.tbxMovieCategoryName = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbxUpdateMovieCategory = new System.Windows.Forms.GroupBox();
             this.btnUpdateMovieCategory = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxUpdateMovieCategoryName = new System.Windows.Forms.TextBox();
             this.dgwMovieCategory = new System.Windows.Forms.DataGridView();
             this.btnRemoveMovieCategory = new System.Windows.Forms.Button();
-            this.gbxMovieCategory = new System.Windows.Forms.GroupBox();
+            this.gbxSearchMovieCategory = new System.Windows.Forms.GroupBox();
             this.tbxSearchMovieCategory = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.gbxAdd.SuspendLayout();
             this.gbxSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwMovies)).BeginInit();
             this.gbxUpdate.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbxAddNewMovieCategory.SuspendLayout();
+            this.gbxUpdateMovieCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwMovieCategory)).BeginInit();
-            this.gbxMovieCategory.SuspendLayout();
+            this.gbxSearchMovieCategory.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxAdd
@@ -82,7 +82,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.gbxAdd.Controls.Add(this.lblTitle);
             this.gbxAdd.Controls.Add(this.tbxTitle);
             this.gbxAdd.Controls.Add(this.lblSurname);
-            this.gbxAdd.Location = new System.Drawing.Point(-3, 211);
+            this.gbxAdd.Location = new System.Drawing.Point(2, 210);
             this.gbxAdd.Name = "gbxAdd";
             this.gbxAdd.Size = new System.Drawing.Size(250, 232);
             this.gbxAdd.TabIndex = 34;
@@ -151,21 +151,22 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             // 
             // gbxSearch
             // 
-            this.gbxSearch.Controls.Add(this.tbxSearch);
+            this.gbxSearch.Controls.Add(this.tbxMovieSearch);
             this.gbxSearch.Controls.Add(this.lblSearch);
-            this.gbxSearch.Location = new System.Drawing.Point(509, 211);
+            this.gbxSearch.Location = new System.Drawing.Point(506, 210);
             this.gbxSearch.Name = "gbxSearch";
             this.gbxSearch.Size = new System.Drawing.Size(250, 100);
             this.gbxSearch.TabIndex = 37;
             this.gbxSearch.TabStop = false;
             this.gbxSearch.Text = "Search By Movie Title";
             // 
-            // tbxSearch
+            // tbxMovieSearch
             // 
-            this.tbxSearch.Location = new System.Drawing.Point(73, 48);
-            this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(156, 20);
-            this.tbxSearch.TabIndex = 2;
+            this.tbxMovieSearch.Location = new System.Drawing.Point(73, 48);
+            this.tbxMovieSearch.Name = "tbxMovieSearch";
+            this.tbxMovieSearch.Size = new System.Drawing.Size(156, 20);
+            this.tbxMovieSearch.TabIndex = 2;
+            this.tbxMovieSearch.TextChanged += new System.EventHandler(this.TbxMovieSearch_TextChanged);
             // 
             // lblSearch
             // 
@@ -180,7 +181,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             // 
             this.dgwMovies.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgwMovies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwMovies.Location = new System.Drawing.Point(-3, 5);
+            this.dgwMovies.Location = new System.Drawing.Point(0, 0);
             this.dgwMovies.Name = "dgwMovies";
             this.dgwMovies.Size = new System.Drawing.Size(765, 200);
             this.dgwMovies.TabIndex = 33;
@@ -195,7 +196,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.gbxUpdate.Controls.Add(this.tbxUpdateTitle);
             this.gbxUpdate.Controls.Add(this.lblUpdateCategory);
             this.gbxUpdate.Controls.Add(this.btnUpdateMovie);
-            this.gbxUpdate.Location = new System.Drawing.Point(253, 211);
+            this.gbxUpdate.Location = new System.Drawing.Point(254, 210);
             this.gbxUpdate.Name = "gbxUpdate";
             this.gbxUpdate.Size = new System.Drawing.Size(250, 232);
             this.gbxUpdate.TabIndex = 35;
@@ -272,17 +273,17 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.tbxRemoveMovie.UseVisualStyleBackColor = true;
             this.tbxRemoveMovie.Click += new System.EventHandler(this.TbxRemoveMovie_Click);
             // 
-            // groupBox1
+            // gbxAddNewMovieCategory
             // 
-            this.groupBox1.Controls.Add(this.btnAddMovieCategory);
-            this.groupBox1.Controls.Add(this.lblMovieCategoryName);
-            this.groupBox1.Controls.Add(this.tbxMovieCategoryName);
-            this.groupBox1.Location = new System.Drawing.Point(765, 211);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(250, 123);
-            this.groupBox1.TabIndex = 35;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Add New Movie Category";
+            this.gbxAddNewMovieCategory.Controls.Add(this.btnAddMovieCategory);
+            this.gbxAddNewMovieCategory.Controls.Add(this.lblMovieCategoryName);
+            this.gbxAddNewMovieCategory.Controls.Add(this.tbxMovieCategoryName);
+            this.gbxAddNewMovieCategory.Location = new System.Drawing.Point(765, 210);
+            this.gbxAddNewMovieCategory.Name = "gbxAddNewMovieCategory";
+            this.gbxAddNewMovieCategory.Size = new System.Drawing.Size(250, 120);
+            this.gbxAddNewMovieCategory.TabIndex = 35;
+            this.gbxAddNewMovieCategory.TabStop = false;
+            this.gbxAddNewMovieCategory.Text = "Add New Movie Category";
             // 
             // btnAddMovieCategory
             // 
@@ -310,17 +311,17 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.tbxMovieCategoryName.Size = new System.Drawing.Size(100, 20);
             this.tbxMovieCategoryName.TabIndex = 2;
             // 
-            // groupBox2
+            // gbxUpdateMovieCategory
             // 
-            this.groupBox2.Controls.Add(this.btnUpdateMovieCategory);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.tbxUpdateMovieCategoryName);
-            this.groupBox2.Location = new System.Drawing.Point(765, 340);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(250, 123);
-            this.groupBox2.TabIndex = 38;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Update Movie Category";
+            this.gbxUpdateMovieCategory.Controls.Add(this.btnUpdateMovieCategory);
+            this.gbxUpdateMovieCategory.Controls.Add(this.label1);
+            this.gbxUpdateMovieCategory.Controls.Add(this.tbxUpdateMovieCategoryName);
+            this.gbxUpdateMovieCategory.Location = new System.Drawing.Point(765, 335);
+            this.gbxUpdateMovieCategory.Name = "gbxUpdateMovieCategory";
+            this.gbxUpdateMovieCategory.Size = new System.Drawing.Size(250, 120);
+            this.gbxUpdateMovieCategory.TabIndex = 38;
+            this.gbxUpdateMovieCategory.TabStop = false;
+            this.gbxUpdateMovieCategory.Text = "Update Movie Category";
             // 
             // btnUpdateMovieCategory
             // 
@@ -352,32 +353,32 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             // 
             this.dgwMovieCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgwMovieCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwMovieCategory.Location = new System.Drawing.Point(768, 5);
+            this.dgwMovieCategory.Location = new System.Drawing.Point(766, 0);
             this.dgwMovieCategory.Name = "dgwMovieCategory";
-            this.dgwMovieCategory.Size = new System.Drawing.Size(247, 200);
+            this.dgwMovieCategory.Size = new System.Drawing.Size(250, 200);
             this.dgwMovieCategory.TabIndex = 39;
             this.dgwMovieCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgwMovieCategory_CellClick);
             // 
             // btnRemoveMovieCategory
             // 
-            this.btnRemoveMovieCategory.Location = new System.Drawing.Point(765, 575);
+            this.btnRemoveMovieCategory.Location = new System.Drawing.Point(763, 560);
             this.btnRemoveMovieCategory.Name = "btnRemoveMovieCategory";
-            this.btnRemoveMovieCategory.Size = new System.Drawing.Size(158, 42);
+            this.btnRemoveMovieCategory.Size = new System.Drawing.Size(150, 40);
             this.btnRemoveMovieCategory.TabIndex = 40;
             this.btnRemoveMovieCategory.Text = "Remove Movie Category";
             this.btnRemoveMovieCategory.UseVisualStyleBackColor = true;
             this.btnRemoveMovieCategory.Click += new System.EventHandler(this.BtnRemoveMovieCategory_Click);
             // 
-            // gbxMovieCategory
+            // gbxSearchMovieCategory
             // 
-            this.gbxMovieCategory.Controls.Add(this.tbxSearchMovieCategory);
-            this.gbxMovieCategory.Controls.Add(this.label2);
-            this.gbxMovieCategory.Location = new System.Drawing.Point(765, 469);
-            this.gbxMovieCategory.Name = "gbxMovieCategory";
-            this.gbxMovieCategory.Size = new System.Drawing.Size(250, 100);
-            this.gbxMovieCategory.TabIndex = 38;
-            this.gbxMovieCategory.TabStop = false;
-            this.gbxMovieCategory.Text = "Search By Movie Category Name";
+            this.gbxSearchMovieCategory.Controls.Add(this.tbxSearchMovieCategory);
+            this.gbxSearchMovieCategory.Controls.Add(this.label2);
+            this.gbxSearchMovieCategory.Location = new System.Drawing.Point(765, 460);
+            this.gbxSearchMovieCategory.Name = "gbxSearchMovieCategory";
+            this.gbxSearchMovieCategory.Size = new System.Drawing.Size(250, 100);
+            this.gbxSearchMovieCategory.TabIndex = 38;
+            this.gbxSearchMovieCategory.TabStop = false;
+            this.gbxSearchMovieCategory.Text = "Search By Movie Category Name";
             // 
             // tbxSearchMovieCategory
             // 
@@ -385,6 +386,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.tbxSearchMovieCategory.Name = "tbxSearchMovieCategory";
             this.tbxSearchMovieCategory.Size = new System.Drawing.Size(156, 20);
             this.tbxSearchMovieCategory.TabIndex = 2;
+            this.tbxSearchMovieCategory.TextChanged += new System.EventHandler(this.TbxSearchMovieCategory_TextChanged);
             // 
             // label2
             // 
@@ -399,12 +401,13 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1018, 750);
-            this.Controls.Add(this.gbxMovieCategory);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1018, 600);
+            this.Controls.Add(this.gbxSearchMovieCategory);
             this.Controls.Add(this.btnRemoveMovieCategory);
             this.Controls.Add(this.dgwMovieCategory);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbxUpdateMovieCategory);
+            this.Controls.Add(this.gbxAddNewMovieCategory);
             this.Controls.Add(this.gbxAdd);
             this.Controls.Add(this.gbxSearch);
             this.Controls.Add(this.dgwMovies);
@@ -420,13 +423,13 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             ((System.ComponentModel.ISupportInitialize)(this.dgwMovies)).EndInit();
             this.gbxUpdate.ResumeLayout(false);
             this.gbxUpdate.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbxAddNewMovieCategory.ResumeLayout(false);
+            this.gbxAddNewMovieCategory.PerformLayout();
+            this.gbxUpdateMovieCategory.ResumeLayout(false);
+            this.gbxUpdateMovieCategory.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwMovieCategory)).EndInit();
-            this.gbxMovieCategory.ResumeLayout(false);
-            this.gbxMovieCategory.PerformLayout();
+            this.gbxSearchMovieCategory.ResumeLayout(false);
+            this.gbxSearchMovieCategory.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -441,7 +444,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
         private System.Windows.Forms.TextBox tbxTitle;
         private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.GroupBox gbxSearch;
-        private System.Windows.Forms.TextBox tbxSearch;
+        private System.Windows.Forms.TextBox tbxMovieSearch;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.DataGridView dgwMovies;
         private System.Windows.Forms.GroupBox gbxUpdate;
@@ -454,17 +457,17 @@ namespace MEAAS.WindowsFormsUI.AdminModule
         private System.Windows.Forms.Label lblUpdateTitle;
         private System.Windows.Forms.TextBox tbxUpdateTitle;
         private System.Windows.Forms.Label lblUpdateCategory;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbxAddNewMovieCategory;
         private System.Windows.Forms.Button btnAddMovieCategory;
         private System.Windows.Forms.Label lblMovieCategoryName;
         private System.Windows.Forms.TextBox tbxMovieCategoryName;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbxUpdateMovieCategory;
         private System.Windows.Forms.Button btnUpdateMovieCategory;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbxUpdateMovieCategoryName;
         private System.Windows.Forms.DataGridView dgwMovieCategory;
         private System.Windows.Forms.Button btnRemoveMovieCategory;
-        private System.Windows.Forms.GroupBox gbxMovieCategory;
+        private System.Windows.Forms.GroupBox gbxSearchMovieCategory;
         private System.Windows.Forms.TextBox tbxSearchMovieCategory;
         private System.Windows.Forms.Label label2;
     }

@@ -10,6 +10,7 @@ namespace MEAAS.Business.Abstract
     public interface IMovieCategoryService
     {
         List<MovieCategory> GetAllMovieCategories();
+        List<MovieCategory> GetMovieCategoriesByCategoryName(string movieCategoryName);
         MovieCategory GetMovieCategoryByMovieCategoryName(string movieCategoryName);
         MovieCategory AddMovieCategory(MovieCategory movieCategory);
         MovieCategory UpdateMovieCategory(MovieCategory movieCategory);

@@ -23,6 +23,11 @@ namespace MEAAS.Business.Concrete.Managers
             return _movieCategoryDal.GetAll();
         }
 
+        public List<MovieCategory> GetMovieCategoriesByCategoryName(string movieCategoryName)
+        {
+            return _movieCategoryDal.GetAll(mc => mc.MovieCategoryName.ToLower().Contains(movieCategoryName.ToLower()));
+        }
+
         public MovieCategory GetMovieCategoryByMovieCategoryName(string movieCategoryName)
         {
             return _movieCategoryDal.Get(mc => mc.MovieCategoryName.Equals(movieCategoryName));
