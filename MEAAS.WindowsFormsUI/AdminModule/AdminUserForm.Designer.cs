@@ -405,7 +405,7 @@
             this.lblSearch.TabIndex = 1;
             this.lblSearch.Text = "Search :";
             // 
-            // AdminForm
+            // AdminUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -416,7 +416,8 @@
             this.Controls.Add(this.gbxUpdate);
             this.Controls.Add(this.gbxAdd);
             this.Controls.Add(this.dgwUsers);
-            this.Name = "AdminForm";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "AdminUserForm";
             this.Text = "Admin-User Panel";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.gbxUpdate.ResumeLayout(false);

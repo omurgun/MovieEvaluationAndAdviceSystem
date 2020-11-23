@@ -79,6 +79,7 @@ namespace MEAAS.WindowsFormsUI.HomeModule
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.btnUser);
             this.Controls.Add(this.btnAdmin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "HomeForm";
             this.Text = "HomeForm";

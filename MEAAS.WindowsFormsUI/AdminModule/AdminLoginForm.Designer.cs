@@ -136,6 +136,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblAdminName);
             this.Controls.Add(this.tbxAdminName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "AdminLoginForm";
             this.Text = "AdminLoginForm";

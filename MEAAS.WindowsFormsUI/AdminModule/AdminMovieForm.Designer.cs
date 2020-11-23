@@ -413,6 +413,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.Controls.Add(this.dgwMovies);
             this.Controls.Add(this.gbxUpdate);
             this.Controls.Add(this.tbxRemoveMovie);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminMovieForm";
             this.Text = "Admin-Moive Panel";
             this.Load += new System.EventHandler(this.AdminMovieForm_Load);

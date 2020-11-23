@@ -151,6 +151,7 @@ namespace MEAAS.WindowsFormsUI.UserModule
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.tbxUserName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "UserLoginForm";
             this.Text = "UserLoginForm";
