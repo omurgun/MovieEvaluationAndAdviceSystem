@@ -19,7 +19,7 @@ namespace MEAAS.WindowsFormsUI.HomeModule
             InitializeComponent();
         }
 
-        private void btnAdmin_Click(object sender, EventArgs e)
+        private void BtnAdmin_Click(object sender, EventArgs e)
         {
             AdminLoginForm adminLoginForm = new AdminLoginForm();
             adminLoginForm.Show();
@@ -27,11 +27,18 @@ namespace MEAAS.WindowsFormsUI.HomeModule
             
         }
 
-        private void btnUser_Click(object sender, EventArgs e)
+        private void BtnUser_Click(object sender, EventArgs e)
         {
             UserLoginForm userLoginForm = new UserLoginForm();
             userLoginForm.Show();
             this.Hide();
         }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        
     }
 }

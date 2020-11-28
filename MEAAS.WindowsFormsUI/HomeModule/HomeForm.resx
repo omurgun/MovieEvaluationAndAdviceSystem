@@ -117,16 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="btnAdmin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btnUser.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblWelcome.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BtnExit.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        8QAAAPEBOQwM5AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHkSURBVFhHxZdJ
+        TsUwDIbfBlizAMQ14HwM92C4AgIJDsK8fCBYMIgFF4D/q+qqzy9phhbxS7/UOI7tOEPjWQ8r4qH4LH6K
+        J+K6OBbYOBWxiW184GsBq+KZ+OP4IG6LtdgUb0Rv90pcExsQzblond/iS699K2KoFFvinWh2sIlta+Oz
+        yQQpMeGXuCsy+L6VwdIgvHO+kWEbHybfF5t1oUF0KBhCQSBLIebcgA/LxBzBR9sgRd6BN5YKIuUc0H4V
+        6X9DwG5PDcgJwuvFbPWzeiQ2xyRn4FAQvj/HOTrdMffH5VH0xy+mkzuWoE0neLxzZ+F1asZ4nQ41mUjp
+        JmfuURNEjk7RrZqTNtoXIjdaqC877THkzDKEUTP3KA1iUucGn85LMQb6TK8q7SH8awBjlyB33wRRa2yS
+        IHzaucN9OmmTchjq648vWo6cGUyls4QawyW6g0H4tMXS7lObSnVojNepmrldMjVjF3T8gyR35n0dvvt/
+        vdAsQzaaBwlFgwlrnBuQlQZxLBY9SmPODfTlBGF1xzuCoWd5iXNDKoilZ/lB24AUDTtirXMDmy4UhC9M
+        9sRkaVbq3OCDiJZmgI+/KE43xGvR2+X67opTA0FQq7EubA6Khu7dPgLYYLez2Z9Elryd+Wz2C8Uqf2kK
+        sdVPAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>
