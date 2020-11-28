@@ -32,76 +32,50 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminLoginForm));
             this.tbxPassword = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.tbxAdminName = new System.Windows.Forms.TextBox();
-            this.lblAdminName = new System.Windows.Forms.Label();
             this.lblAdminLogin = new System.Windows.Forms.Label();
-            this.btnAdminLogin = new System.Windows.Forms.Button();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.btnBack = new System.Windows.Forms.Button();
+            this.BtnExit = new System.Windows.Forms.Button();
+            this.BtnBack = new System.Windows.Forms.Button();
+            this.btnAdminLogin = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tbxPassword
             // 
-            this.tbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbxPassword.Location = new System.Drawing.Point(363, 261);
+            this.tbxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(193)))));
+            this.tbxPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxPassword.Font = new System.Drawing.Font("Arial Narrow", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxPassword.Location = new System.Drawing.Point(165, 305);
             this.tbxPassword.Name = "tbxPassword";
-            this.tbxPassword.Size = new System.Drawing.Size(196, 45);
+            this.tbxPassword.Size = new System.Drawing.Size(324, 45);
             this.tbxPassword.TabIndex = 14;
             this.tbxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbxPassword.UseSystemPasswordChar = true;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(33, 252);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(255, 54);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Password :";
-            // 
             // tbxAdminName
             // 
-            this.tbxAdminName.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbxAdminName.Location = new System.Drawing.Point(363, 176);
+            this.tbxAdminName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(193)))));
+            this.tbxAdminName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxAdminName.Font = new System.Drawing.Font("Arial Narrow", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxAdminName.Location = new System.Drawing.Point(165, 220);
             this.tbxAdminName.Name = "tbxAdminName";
-            this.tbxAdminName.Size = new System.Drawing.Size(196, 45);
+            this.tbxAdminName.Size = new System.Drawing.Size(324, 45);
             this.tbxAdminName.TabIndex = 6;
             this.tbxAdminName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblAdminName
-            // 
-            this.lblAdminName.AutoSize = true;
-            this.lblAdminName.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAdminName.Location = new System.Drawing.Point(33, 166);
-            this.lblAdminName.Name = "lblAdminName";
-            this.lblAdminName.Size = new System.Drawing.Size(317, 54);
-            this.lblAdminName.TabIndex = 5;
-            this.lblAdminName.Text = "Admin Name :";
             // 
             // lblAdminLogin
             // 
             this.lblAdminLogin.AutoSize = true;
-            this.lblAdminLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAdminLogin.Location = new System.Drawing.Point(110, 29);
+            this.lblAdminLogin.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAdminLogin.Location = new System.Drawing.Point(99, 62);
             this.lblAdminLogin.Name = "lblAdminLogin";
-            this.lblAdminLogin.Size = new System.Drawing.Size(394, 63);
+            this.lblAdminLogin.Size = new System.Drawing.Size(454, 72);
             this.lblAdminLogin.TabIndex = 14;
             this.lblAdminLogin.Text = "ADMIN LOGIN";
-            // 
-            // btnAdminLogin
-            // 
-            this.btnAdminLogin.BackColor = System.Drawing.Color.Aqua;
-            this.btnAdminLogin.FlatAppearance.BorderColor = System.Drawing.Color.Aqua;
-            this.btnAdminLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAdminLogin.Location = new System.Drawing.Point(172, 408);
-            this.btnAdminLogin.Name = "btnAdminLogin";
-            this.btnAdminLogin.Size = new System.Drawing.Size(250, 100);
-            this.btnAdminLogin.TabIndex = 15;
-            this.btnAdminLogin.Text = "Login";
-            this.btnAdminLogin.UseVisualStyleBackColor = false;
-            this.btnAdminLogin.Click += new System.EventHandler(this.BtnAdminLogin_Click);
             // 
             // ımageList1
             // 
@@ -109,38 +83,97 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.ımageList1.Images.SetKeyName(0, "left-arrow.png");
             // 
-            // btnBack
+            // BtnExit
             // 
-            this.btnBack.BackColor = System.Drawing.Color.Aqua;
-            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.Aqua;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBack.ImageIndex = 0;
-            this.btnBack.ImageList = this.ımageList1;
-            this.btnBack.Location = new System.Drawing.Point(12, 29);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(41, 35);
-            this.btnBack.TabIndex = 16;
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
+            this.BtnExit.BackColor = System.Drawing.Color.Transparent;
+            this.BtnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnExit.BackgroundImage")));
+            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExit.Location = new System.Drawing.Point(588, 12);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(34, 34);
+            this.BtnExit.TabIndex = 17;
+            this.BtnExit.UseVisualStyleBackColor = false;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
+            // BtnBack
+            // 
+            this.BtnBack.BackColor = System.Drawing.Color.Transparent;
+            this.BtnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnBack.BackgroundImage")));
+            this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBack.Location = new System.Drawing.Point(12, 12);
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.Size = new System.Drawing.Size(34, 34);
+            this.BtnBack.TabIndex = 18;
+            this.BtnBack.UseVisualStyleBackColor = false;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
+            // 
+            // btnAdminLogin
+            // 
+            this.btnAdminLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.btnAdminLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAdminLogin.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAdminLogin.FlatAppearance.BorderSize = 3;
+            this.btnAdminLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(153)))), ((int)(((byte)(199)))));
+            this.btnAdminLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdminLogin.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAdminLogin.ForeColor = System.Drawing.Color.Black;
+            this.btnAdminLogin.Location = new System.Drawing.Point(122, 453);
+            this.btnAdminLogin.Name = "btnAdminLogin";
+            this.btnAdminLogin.Size = new System.Drawing.Size(388, 100);
+            this.btnAdminLogin.TabIndex = 19;
+            this.btnAdminLogin.Text = "Login";
+            this.btnAdminLogin.UseVisualStyleBackColor = false;
+            this.btnAdminLogin.Click += new System.EventHandler(this.BtnAdminLogin_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(111, 220);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(111, 305);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 45);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
             // 
             // AdminLoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
-            this.ClientSize = new System.Drawing.Size(634, 561);
-            this.Controls.Add(this.btnBack);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(193)))));
+            this.ClientSize = new System.Drawing.Size(650, 650);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAdminLogin);
+            this.Controls.Add(this.BtnBack);
+            this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.lblAdminLogin);
             this.Controls.Add(this.tbxPassword);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblAdminName);
             this.Controls.Add(this.tbxAdminName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "AdminLoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminLoginForm";
-            this.Load += new System.EventHandler(this.AdminLoginForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,12 +181,13 @@ namespace MEAAS.WindowsFormsUI.AdminModule
 
         #endregion
         private System.Windows.Forms.TextBox tbxPassword;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbxAdminName;
-        private System.Windows.Forms.Label lblAdminName;
         private System.Windows.Forms.Label lblAdminLogin;
-        private System.Windows.Forms.Button btnAdminLogin;
         private System.Windows.Forms.ImageList ımageList1;
-        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button BtnExit;
+        private System.Windows.Forms.Button BtnBack;
+        private System.Windows.Forms.Button btnAdminLogin;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -47,7 +47,7 @@ namespace MEAAS.WindowsFormsUI.HomeModule
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmin.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAdmin.ForeColor = System.Drawing.Color.Black;
-            this.btnAdmin.Location = new System.Drawing.Point(113, 142);
+            this.btnAdmin.Location = new System.Drawing.Point(131, 188);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(388, 100);
             this.btnAdmin.TabIndex = 0;
@@ -64,7 +64,7 @@ namespace MEAAS.WindowsFormsUI.HomeModule
             this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUser.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUser.ForeColor = System.Drawing.Color.Black;
-            this.btnUser.Location = new System.Drawing.Point(113, 299);
+            this.btnUser.Location = new System.Drawing.Point(131, 366);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(388, 100);
             this.btnUser.TabIndex = 1;
@@ -92,14 +92,22 @@ namespace MEAAS.WindowsFormsUI.HomeModule
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(634, 561);
+            this.ClientSize = new System.Drawing.Size(650, 650);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.btnUser);
             this.Controls.Add(this.btnAdmin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "HomeForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomeForm";
+            this.TopMost = true;
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomeForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomeForm_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomeForm_MouseUp);
             this.ResumeLayout(false);
 
         }

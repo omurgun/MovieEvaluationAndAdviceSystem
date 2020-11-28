@@ -49,9 +49,11 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.Hide();
         }
 
-        private void AdminLoginForm_Load(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
+
+        
     }
 }

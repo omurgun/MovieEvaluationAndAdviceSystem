@@ -24,7 +24,6 @@ namespace MEAAS.WindowsFormsUI.HomeModule
             AdminLoginForm adminLoginForm = new AdminLoginForm();
             adminLoginForm.Show();
             this.Hide();
-            
         }
 
         private void BtnUser_Click(object sender, EventArgs e)
@@ -39,6 +38,31 @@ namespace MEAAS.WindowsFormsUI.HomeModule
             Application.Exit();
         }
 
-        
+        private bool move;
+        private int mouse_x;
+        private int mouse_y;
+
+       
+
+        private void HomeForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            move = true;
+            mouse_x = e.X;
+            mouse_y = e.Y;
+        }
+
+        private void HomeForm_MouseUp(object sender, MouseEventArgs e)
+        {
+            move = false;
+        }
+
+        private void HomeForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (move)
+            {
+                this.SetDesktopLocation(MousePosition.X - mouse_x, MousePosition.Y - mouse_y);
+            }
+            
+        }
     }
 }
