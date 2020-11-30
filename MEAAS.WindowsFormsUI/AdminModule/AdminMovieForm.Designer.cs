@@ -29,6 +29,10 @@ namespace MEAAS.WindowsFormsUI.AdminModule
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbxAdd = new System.Windows.Forms.GroupBox();
             this.cbxMovieCategory = new System.Windows.Forms.ComboBox();
             this.lblThumbnail = new System.Windows.Forms.Label();
@@ -50,27 +54,10 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.lblUpdateCategory = new System.Windows.Forms.Label();
             this.btnUpdateMovie = new System.Windows.Forms.Button();
             this.tbxRemoveMovie = new System.Windows.Forms.Button();
-            this.gbxAddNewMovieCategory = new System.Windows.Forms.GroupBox();
-            this.btnAddMovieCategory = new System.Windows.Forms.Button();
-            this.lblMovieCategoryName = new System.Windows.Forms.Label();
-            this.tbxMovieCategoryName = new System.Windows.Forms.TextBox();
-            this.gbxUpdateMovieCategory = new System.Windows.Forms.GroupBox();
-            this.btnUpdateMovieCategory = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbxUpdateMovieCategoryName = new System.Windows.Forms.TextBox();
-            this.dgwMovieCategory = new System.Windows.Forms.DataGridView();
-            this.btnRemoveMovieCategory = new System.Windows.Forms.Button();
-            this.gbxSearchMovieCategory = new System.Windows.Forms.GroupBox();
-            this.tbxSearchMovieCategory = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.gbxAdd.SuspendLayout();
             this.gbxSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwMovies)).BeginInit();
             this.gbxUpdate.SuspendLayout();
-            this.gbxAddNewMovieCategory.SuspendLayout();
-            this.gbxUpdateMovieCategory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwMovieCategory)).BeginInit();
-            this.gbxSearchMovieCategory.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxAdd
@@ -82,7 +69,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.gbxAdd.Controls.Add(this.lblTitle);
             this.gbxAdd.Controls.Add(this.tbxTitle);
             this.gbxAdd.Controls.Add(this.lblSurname);
-            this.gbxAdd.Location = new System.Drawing.Point(2, 210);
+            this.gbxAdd.Location = new System.Drawing.Point(469, 335);
             this.gbxAdd.Name = "gbxAdd";
             this.gbxAdd.Size = new System.Drawing.Size(250, 232);
             this.gbxAdd.TabIndex = 34;
@@ -153,7 +140,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             // 
             this.gbxSearch.Controls.Add(this.tbxMovieSearch);
             this.gbxSearch.Controls.Add(this.lblSearch);
-            this.gbxSearch.Location = new System.Drawing.Point(506, 210);
+            this.gbxSearch.Location = new System.Drawing.Point(213, 335);
             this.gbxSearch.Name = "gbxSearch";
             this.gbxSearch.Size = new System.Drawing.Size(250, 100);
             this.gbxSearch.TabIndex = 37;
@@ -179,11 +166,56 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             // 
             // dgwMovies
             // 
+            this.dgwMovies.AllowUserToAddRows = false;
+            this.dgwMovies.AllowUserToDeleteRows = false;
+            this.dgwMovies.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgwMovies.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgwMovies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwMovies.Location = new System.Drawing.Point(0, 0);
+            this.dgwMovies.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dgwMovies.BackgroundColor = System.Drawing.Color.Black;
+            this.dgwMovies.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgwMovies.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgwMovies.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwMovies.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgwMovies.ColumnHeadersHeight = 30;
+            this.dgwMovies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgwMovies.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgwMovies.EnableHeadersVisualStyles = false;
+            this.dgwMovies.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(193)))));
+            this.dgwMovies.Location = new System.Drawing.Point(119, 21);
             this.dgwMovies.Name = "dgwMovies";
-            this.dgwMovies.Size = new System.Drawing.Size(765, 200);
+            this.dgwMovies.ReadOnly = true;
+            this.dgwMovies.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(193)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwMovies.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(193)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgwMovies.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgwMovies.Size = new System.Drawing.Size(765, 278);
             this.dgwMovies.TabIndex = 33;
             this.dgwMovies.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgwMovies_CellClick);
             // 
@@ -196,7 +228,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.gbxUpdate.Controls.Add(this.tbxUpdateTitle);
             this.gbxUpdate.Controls.Add(this.lblUpdateCategory);
             this.gbxUpdate.Controls.Add(this.btnUpdateMovie);
-            this.gbxUpdate.Location = new System.Drawing.Point(254, 210);
+            this.gbxUpdate.Location = new System.Drawing.Point(725, 335);
             this.gbxUpdate.Name = "gbxUpdate";
             this.gbxUpdate.Size = new System.Drawing.Size(250, 232);
             this.gbxUpdate.TabIndex = 35;
@@ -265,7 +297,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             // 
             // tbxRemoveMovie
             // 
-            this.tbxRemoveMovie.Location = new System.Drawing.Point(509, 317);
+            this.tbxRemoveMovie.Location = new System.Drawing.Point(224, 463);
             this.tbxRemoveMovie.Name = "tbxRemoveMovie";
             this.tbxRemoveMovie.Size = new System.Drawing.Size(88, 29);
             this.tbxRemoveMovie.TabIndex = 36;
@@ -273,141 +305,12 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.tbxRemoveMovie.UseVisualStyleBackColor = true;
             this.tbxRemoveMovie.Click += new System.EventHandler(this.TbxRemoveMovie_Click);
             // 
-            // gbxAddNewMovieCategory
-            // 
-            this.gbxAddNewMovieCategory.Controls.Add(this.btnAddMovieCategory);
-            this.gbxAddNewMovieCategory.Controls.Add(this.lblMovieCategoryName);
-            this.gbxAddNewMovieCategory.Controls.Add(this.tbxMovieCategoryName);
-            this.gbxAddNewMovieCategory.Location = new System.Drawing.Point(765, 210);
-            this.gbxAddNewMovieCategory.Name = "gbxAddNewMovieCategory";
-            this.gbxAddNewMovieCategory.Size = new System.Drawing.Size(250, 120);
-            this.gbxAddNewMovieCategory.TabIndex = 35;
-            this.gbxAddNewMovieCategory.TabStop = false;
-            this.gbxAddNewMovieCategory.Text = "Add New Movie Category";
-            // 
-            // btnAddMovieCategory
-            // 
-            this.btnAddMovieCategory.Location = new System.Drawing.Point(73, 81);
-            this.btnAddMovieCategory.Name = "btnAddMovieCategory";
-            this.btnAddMovieCategory.Size = new System.Drawing.Size(88, 29);
-            this.btnAddMovieCategory.TabIndex = 8;
-            this.btnAddMovieCategory.Text = "Add";
-            this.btnAddMovieCategory.UseVisualStyleBackColor = true;
-            this.btnAddMovieCategory.Click += new System.EventHandler(this.BtnAddMovieCategory_Click);
-            // 
-            // lblMovieCategoryName
-            // 
-            this.lblMovieCategoryName.AutoSize = true;
-            this.lblMovieCategoryName.Location = new System.Drawing.Point(36, 42);
-            this.lblMovieCategoryName.Name = "lblMovieCategoryName";
-            this.lblMovieCategoryName.Size = new System.Drawing.Size(35, 13);
-            this.lblMovieCategoryName.TabIndex = 1;
-            this.lblMovieCategoryName.Text = "Name";
-            // 
-            // tbxMovieCategoryName
-            // 
-            this.tbxMovieCategoryName.Location = new System.Drawing.Point(133, 39);
-            this.tbxMovieCategoryName.Name = "tbxMovieCategoryName";
-            this.tbxMovieCategoryName.Size = new System.Drawing.Size(100, 20);
-            this.tbxMovieCategoryName.TabIndex = 2;
-            // 
-            // gbxUpdateMovieCategory
-            // 
-            this.gbxUpdateMovieCategory.Controls.Add(this.btnUpdateMovieCategory);
-            this.gbxUpdateMovieCategory.Controls.Add(this.label1);
-            this.gbxUpdateMovieCategory.Controls.Add(this.tbxUpdateMovieCategoryName);
-            this.gbxUpdateMovieCategory.Location = new System.Drawing.Point(765, 335);
-            this.gbxUpdateMovieCategory.Name = "gbxUpdateMovieCategory";
-            this.gbxUpdateMovieCategory.Size = new System.Drawing.Size(250, 120);
-            this.gbxUpdateMovieCategory.TabIndex = 38;
-            this.gbxUpdateMovieCategory.TabStop = false;
-            this.gbxUpdateMovieCategory.Text = "Update Movie Category";
-            // 
-            // btnUpdateMovieCategory
-            // 
-            this.btnUpdateMovieCategory.Location = new System.Drawing.Point(73, 81);
-            this.btnUpdateMovieCategory.Name = "btnUpdateMovieCategory";
-            this.btnUpdateMovieCategory.Size = new System.Drawing.Size(88, 29);
-            this.btnUpdateMovieCategory.TabIndex = 8;
-            this.btnUpdateMovieCategory.Text = "Update";
-            this.btnUpdateMovieCategory.UseVisualStyleBackColor = true;
-            this.btnUpdateMovieCategory.Click += new System.EventHandler(this.BtnUpdateMovieCategory_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Name";
-            // 
-            // tbxUpdateMovieCategoryName
-            // 
-            this.tbxUpdateMovieCategoryName.Location = new System.Drawing.Point(133, 39);
-            this.tbxUpdateMovieCategoryName.Name = "tbxUpdateMovieCategoryName";
-            this.tbxUpdateMovieCategoryName.Size = new System.Drawing.Size(100, 20);
-            this.tbxUpdateMovieCategoryName.TabIndex = 2;
-            // 
-            // dgwMovieCategory
-            // 
-            this.dgwMovieCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgwMovieCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwMovieCategory.Location = new System.Drawing.Point(766, 0);
-            this.dgwMovieCategory.Name = "dgwMovieCategory";
-            this.dgwMovieCategory.Size = new System.Drawing.Size(250, 200);
-            this.dgwMovieCategory.TabIndex = 39;
-            this.dgwMovieCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgwMovieCategory_CellClick);
-            // 
-            // btnRemoveMovieCategory
-            // 
-            this.btnRemoveMovieCategory.Location = new System.Drawing.Point(763, 560);
-            this.btnRemoveMovieCategory.Name = "btnRemoveMovieCategory";
-            this.btnRemoveMovieCategory.Size = new System.Drawing.Size(150, 40);
-            this.btnRemoveMovieCategory.TabIndex = 40;
-            this.btnRemoveMovieCategory.Text = "Remove Movie Category";
-            this.btnRemoveMovieCategory.UseVisualStyleBackColor = true;
-            this.btnRemoveMovieCategory.Click += new System.EventHandler(this.BtnRemoveMovieCategory_Click);
-            // 
-            // gbxSearchMovieCategory
-            // 
-            this.gbxSearchMovieCategory.Controls.Add(this.tbxSearchMovieCategory);
-            this.gbxSearchMovieCategory.Controls.Add(this.label2);
-            this.gbxSearchMovieCategory.Location = new System.Drawing.Point(765, 460);
-            this.gbxSearchMovieCategory.Name = "gbxSearchMovieCategory";
-            this.gbxSearchMovieCategory.Size = new System.Drawing.Size(250, 100);
-            this.gbxSearchMovieCategory.TabIndex = 38;
-            this.gbxSearchMovieCategory.TabStop = false;
-            this.gbxSearchMovieCategory.Text = "Search By Movie Category Name";
-            // 
-            // tbxSearchMovieCategory
-            // 
-            this.tbxSearchMovieCategory.Location = new System.Drawing.Point(73, 48);
-            this.tbxSearchMovieCategory.Name = "tbxSearchMovieCategory";
-            this.tbxSearchMovieCategory.Size = new System.Drawing.Size(156, 20);
-            this.tbxSearchMovieCategory.TabIndex = 2;
-            this.tbxSearchMovieCategory.TextChanged += new System.EventHandler(this.TbxSearchMovieCategory_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Search :";
-            // 
             // AdminMovieForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
-            this.ClientSize = new System.Drawing.Size(1018, 600);
-            this.Controls.Add(this.gbxSearchMovieCategory);
-            this.Controls.Add(this.btnRemoveMovieCategory);
-            this.Controls.Add(this.dgwMovieCategory);
-            this.Controls.Add(this.gbxUpdateMovieCategory);
-            this.Controls.Add(this.gbxAddNewMovieCategory);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(193)))));
+            this.ClientSize = new System.Drawing.Size(1018, 817);
             this.Controls.Add(this.gbxAdd);
             this.Controls.Add(this.gbxSearch);
             this.Controls.Add(this.dgwMovies);
@@ -424,13 +327,6 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             ((System.ComponentModel.ISupportInitialize)(this.dgwMovies)).EndInit();
             this.gbxUpdate.ResumeLayout(false);
             this.gbxUpdate.PerformLayout();
-            this.gbxAddNewMovieCategory.ResumeLayout(false);
-            this.gbxAddNewMovieCategory.PerformLayout();
-            this.gbxUpdateMovieCategory.ResumeLayout(false);
-            this.gbxUpdateMovieCategory.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwMovieCategory)).EndInit();
-            this.gbxSearchMovieCategory.ResumeLayout(false);
-            this.gbxSearchMovieCategory.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -458,18 +354,5 @@ namespace MEAAS.WindowsFormsUI.AdminModule
         private System.Windows.Forms.Label lblUpdateTitle;
         private System.Windows.Forms.TextBox tbxUpdateTitle;
         private System.Windows.Forms.Label lblUpdateCategory;
-        private System.Windows.Forms.GroupBox gbxAddNewMovieCategory;
-        private System.Windows.Forms.Button btnAddMovieCategory;
-        private System.Windows.Forms.Label lblMovieCategoryName;
-        private System.Windows.Forms.TextBox tbxMovieCategoryName;
-        private System.Windows.Forms.GroupBox gbxUpdateMovieCategory;
-        private System.Windows.Forms.Button btnUpdateMovieCategory;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbxUpdateMovieCategoryName;
-        private System.Windows.Forms.DataGridView dgwMovieCategory;
-        private System.Windows.Forms.Button btnRemoveMovieCategory;
-        private System.Windows.Forms.GroupBox gbxSearchMovieCategory;
-        private System.Windows.Forms.TextBox tbxSearchMovieCategory;
-        private System.Windows.Forms.Label label2;
     }
 }

@@ -48,7 +48,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             // 
             this.tbxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(193)))));
             this.tbxPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbxPassword.Font = new System.Drawing.Font("Arial Narrow", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxPassword.Font = new System.Drawing.Font("Arial Narrow", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxPassword.Location = new System.Drawing.Point(165, 305);
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.Size = new System.Drawing.Size(324, 45);
@@ -60,7 +60,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             // 
             this.tbxAdminName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(193)))));
             this.tbxAdminName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbxAdminName.Font = new System.Drawing.Font("Arial Narrow", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxAdminName.Font = new System.Drawing.Font("Arial Narrow", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxAdminName.Location = new System.Drawing.Point(165, 220);
             this.tbxAdminName.Name = "tbxAdminName";
             this.tbxAdminName.Size = new System.Drawing.Size(324, 45);

@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminModule\AdminMovieCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminModule\AdminMovieCategoryForm.Designer.cs">
+      <DependentUpon>AdminMovieCategoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminModule\AdminUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     <Compile Include="UserModule\UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminModule\AdminMovieCategoryForm.resx">
+      <DependentUpon>AdminMovieCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminModule\AdminUserForm.resx">
       <DependentUpon>AdminUserForm.cs</DependentUpon>
     </EmbeddedResource>
