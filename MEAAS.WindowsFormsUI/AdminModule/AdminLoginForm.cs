@@ -31,6 +31,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
                 {
                     
                     AdminHomeMenuForm adminHomeMenuForm = new AdminHomeMenuForm();
+                    adminHomeMenuForm.lblAdminName.Text = adminName;
                     adminHomeMenuForm.Show();
                     this.Hide();
                 }

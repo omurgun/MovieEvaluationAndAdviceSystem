@@ -29,9 +29,9 @@ namespace MEAAS.WindowsFormsUI.AdminModule
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMovieCategoryForm));
             this.gbxSearchMovieCategory = new System.Windows.Forms.GroupBox();
             this.tbxSearchMovieCategory = new System.Windows.Forms.TextBox();
@@ -39,15 +39,15 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.gbxUpdateMovieCategory = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxUpdateMovieCategoryName = new System.Windows.Forms.TextBox();
+            this.btnUpdateMovieCategory = new System.Windows.Forms.Button();
             this.gbxAddNewMovieCategory = new System.Windows.Forms.GroupBox();
             this.lblMovieCategoryName = new System.Windows.Forms.Label();
             this.tbxMovieCategoryName = new System.Windows.Forms.TextBox();
+            this.btnAddMovieCategory = new System.Windows.Forms.Button();
             this.dgwMovieCategory = new System.Windows.Forms.DataGridView();
             this.BtnBack = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
-            this.btnAddMovieCategory = new System.Windows.Forms.Button();
             this.btnDeleteMovieCategory = new System.Windows.Forms.Button();
-            this.btnUpdateMovieCategory = new System.Windows.Forms.Button();
             this.gbxSearchMovieCategory.SuspendLayout();
             this.gbxUpdateMovieCategory.SuspendLayout();
             this.gbxAddNewMovieCategory.SuspendLayout();
@@ -74,6 +74,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.tbxSearchMovieCategory.Name = "tbxSearchMovieCategory";
             this.tbxSearchMovieCategory.Size = new System.Drawing.Size(200, 30);
             this.tbxSearchMovieCategory.TabIndex = 2;
+            this.tbxSearchMovieCategory.TextChanged += new System.EventHandler(this.TbxSearchMovieCategory_TextChanged);
             // 
             // label2
             // 
@@ -115,6 +116,24 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.tbxUpdateMovieCategoryName.Size = new System.Drawing.Size(189, 30);
             this.tbxUpdateMovieCategoryName.TabIndex = 2;
             // 
+            // btnUpdateMovieCategory
+            // 
+            this.btnUpdateMovieCategory.BackColor = System.Drawing.Color.Yellow;
+            this.btnUpdateMovieCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnUpdateMovieCategory.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnUpdateMovieCategory.FlatAppearance.BorderSize = 3;
+            this.btnUpdateMovieCategory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(153)))), ((int)(((byte)(199)))));
+            this.btnUpdateMovieCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateMovieCategory.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUpdateMovieCategory.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdateMovieCategory.Location = new System.Drawing.Point(41, 121);
+            this.btnUpdateMovieCategory.Name = "btnUpdateMovieCategory";
+            this.btnUpdateMovieCategory.Size = new System.Drawing.Size(258, 75);
+            this.btnUpdateMovieCategory.TabIndex = 49;
+            this.btnUpdateMovieCategory.Text = "Update";
+            this.btnUpdateMovieCategory.UseVisualStyleBackColor = false;
+            this.btnUpdateMovieCategory.Click += new System.EventHandler(this.BtnUpdateMovieCategory_Click);
+            // 
             // gbxAddNewMovieCategory
             // 
             this.gbxAddNewMovieCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(204)))), ((int)(((byte)(207)))));
@@ -146,6 +165,24 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.tbxMovieCategoryName.Size = new System.Drawing.Size(183, 30);
             this.tbxMovieCategoryName.TabIndex = 2;
             // 
+            // btnAddMovieCategory
+            // 
+            this.btnAddMovieCategory.BackColor = System.Drawing.Color.Lime;
+            this.btnAddMovieCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddMovieCategory.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAddMovieCategory.FlatAppearance.BorderSize = 3;
+            this.btnAddMovieCategory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(153)))), ((int)(((byte)(199)))));
+            this.btnAddMovieCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddMovieCategory.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAddMovieCategory.ForeColor = System.Drawing.Color.Black;
+            this.btnAddMovieCategory.Location = new System.Drawing.Point(41, 121);
+            this.btnAddMovieCategory.Name = "btnAddMovieCategory";
+            this.btnAddMovieCategory.Size = new System.Drawing.Size(258, 75);
+            this.btnAddMovieCategory.TabIndex = 48;
+            this.btnAddMovieCategory.Text = "Add";
+            this.btnAddMovieCategory.UseVisualStyleBackColor = false;
+            this.btnAddMovieCategory.Click += new System.EventHandler(this.BtnAddMovie_Click);
+            // 
             // dgwMovieCategory
             // 
             this.dgwMovieCategory.AllowUserToAddRows = false;
@@ -159,39 +196,40 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.dgwMovieCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwMovieCategory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgwMovieCategory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(119)))), ((int)(((byte)(120)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwMovieCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(119)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwMovieCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgwMovieCategory.ColumnHeadersHeight = 30;
             this.dgwMovieCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(204)))), ((int)(((byte)(207)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgwMovieCategory.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(204)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgwMovieCategory.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgwMovieCategory.EnableHeadersVisualStyles = false;
             this.dgwMovieCategory.Location = new System.Drawing.Point(23, 52);
             this.dgwMovieCategory.Name = "dgwMovieCategory";
             this.dgwMovieCategory.ReadOnly = true;
             this.dgwMovieCategory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(119)))), ((int)(((byte)(120)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwMovieCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(119)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwMovieCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgwMovieCategory.Size = new System.Drawing.Size(1113, 294);
             this.dgwMovieCategory.TabIndex = 3;
+            this.dgwMovieCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgwMovieCategory_CellClick);
             // 
             // BtnBack
             // 
@@ -223,24 +261,6 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.BtnExit.UseVisualStyleBackColor = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
-            // btnAddMovieCategory
-            // 
-            this.btnAddMovieCategory.BackColor = System.Drawing.Color.Lime;
-            this.btnAddMovieCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAddMovieCategory.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAddMovieCategory.FlatAppearance.BorderSize = 3;
-            this.btnAddMovieCategory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(153)))), ((int)(((byte)(199)))));
-            this.btnAddMovieCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddMovieCategory.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAddMovieCategory.ForeColor = System.Drawing.Color.Black;
-            this.btnAddMovieCategory.Location = new System.Drawing.Point(41, 121);
-            this.btnAddMovieCategory.Name = "btnAddMovieCategory";
-            this.btnAddMovieCategory.Size = new System.Drawing.Size(258, 75);
-            this.btnAddMovieCategory.TabIndex = 48;
-            this.btnAddMovieCategory.Text = "Add";
-            this.btnAddMovieCategory.UseVisualStyleBackColor = false;
-            this.btnAddMovieCategory.Click += new System.EventHandler(this.btnAddMovie_Click);
-            // 
             // btnDeleteMovieCategory
             // 
             this.btnDeleteMovieCategory.BackColor = System.Drawing.Color.Red;
@@ -257,25 +277,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.btnDeleteMovieCategory.TabIndex = 50;
             this.btnDeleteMovieCategory.Text = "Delete";
             this.btnDeleteMovieCategory.UseVisualStyleBackColor = false;
-            this.btnDeleteMovieCategory.Click += new System.EventHandler(this.btnRemoveMovie_Click);
-            // 
-            // btnUpdateMovieCategory
-            // 
-            this.btnUpdateMovieCategory.BackColor = System.Drawing.Color.Yellow;
-            this.btnUpdateMovieCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnUpdateMovieCategory.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnUpdateMovieCategory.FlatAppearance.BorderSize = 3;
-            this.btnUpdateMovieCategory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(153)))), ((int)(((byte)(199)))));
-            this.btnUpdateMovieCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateMovieCategory.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUpdateMovieCategory.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdateMovieCategory.Location = new System.Drawing.Point(41, 121);
-            this.btnUpdateMovieCategory.Name = "btnUpdateMovieCategory";
-            this.btnUpdateMovieCategory.Size = new System.Drawing.Size(258, 75);
-            this.btnUpdateMovieCategory.TabIndex = 49;
-            this.btnUpdateMovieCategory.Text = "Update";
-            this.btnUpdateMovieCategory.UseVisualStyleBackColor = false;
-            this.btnUpdateMovieCategory.Click += new System.EventHandler(this.btnUpdateMovie_Click);
+            this.btnDeleteMovieCategory.Click += new System.EventHandler(this.BtnDeleteMovieCategory_Click);
             // 
             // AdminMovieCategoryForm
             // 
