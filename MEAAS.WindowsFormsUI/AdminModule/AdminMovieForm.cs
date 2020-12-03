@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MEAAS.Business.Abstract;
 using MEAAS.Business.DependencyResolvers.Ninject;
 using MEAAS.Entities.Concrete;
+using MEAAS.WindowsFormsUI.HomeModule;
 
 namespace MEAAS.WindowsFormsUI.AdminModule
 {
@@ -28,13 +29,11 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             LoadMovieCategories();
             LoadMovies();
         }
-
         private void LoadMovieCategories()
         {
 
             var movieCategories =_movieCategoryService.GetAllMovieCategories();
-            //dgwMovieCategory.DataSource = movieCategories;
-
+            
             cbxMovieCategory.DataSource = movieCategories;
             cbxMovieCategory.DisplayMember = "MovieCategoryName";
             cbxMovieCategory.ValueMember = "MovieCategoryId";
@@ -48,7 +47,6 @@ namespace MEAAS.WindowsFormsUI.AdminModule
         {
             dgwMovies.DataSource = _movieService.GetAllMovies();
         }
-
         private void BtnAddMovie_Click(object sender, EventArgs e)
         {
             try
@@ -147,7 +145,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
                 MessageBox.Show(exception.Message);
             }
         }
-        private void TbxRemoveMovie_Click(object sender, EventArgs e)
+        private void BtnRemoveMovie_Click(object sender, EventArgs e)
         {
             if (dgwMovies.CurrentRow != null)
             {
@@ -163,10 +161,6 @@ namespace MEAAS.WindowsFormsUI.AdminModule
                 MessageBox.Show(@"Please Select Movie!");
             }
         }
-
-
-      
-
         private void DgwMovies_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgwMovies.CurrentRow != null)
@@ -177,8 +171,6 @@ namespace MEAAS.WindowsFormsUI.AdminModule
                 
             }
         }
-       
-
         private void TbxMovieSearch_TextChanged(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(tbxMovieSearch.Text))
@@ -190,6 +182,17 @@ namespace MEAAS.WindowsFormsUI.AdminModule
                 LoadMovies();
             }
         }
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            HomeForm homeForm = new HomeForm();
+            homeForm.Show();
+            this.Hide();
+        }
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         
     }
 }
