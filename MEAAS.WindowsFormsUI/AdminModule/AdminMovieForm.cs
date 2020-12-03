@@ -184,8 +184,8 @@ namespace MEAAS.WindowsFormsUI.AdminModule
         }
         private void BtnBack_Click(object sender, EventArgs e)
         {
-            HomeForm homeForm = new HomeForm();
-            homeForm.Show();
+            AdminHomeMenuForm adminHomeMenuForm = new AdminHomeMenuForm();
+            adminHomeMenuForm.Show();
             this.Hide();
         }
         private void BtnExit_Click(object sender, EventArgs e)
