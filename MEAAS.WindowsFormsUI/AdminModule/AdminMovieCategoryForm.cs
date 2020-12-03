@@ -165,7 +165,30 @@ namespace MEAAS.WindowsFormsUI.AdminModule
                 LoadMovieCategories();
             }
         }
-
         
+        private bool move;
+        private int mouse_x;
+        private int mouse_y;
+
+
+        private void AdminMovieCategoryForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            move = true;
+            mouse_x = e.X;
+            mouse_y = e.Y;
+        }
+
+        private void AdminMovieCategoryForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (move)
+            {
+                this.SetDesktopLocation(MousePosition.X - mouse_x, MousePosition.Y - mouse_y);
+            }
+        }
+
+        private void AdminMovieCategoryForm_MouseUp(object sender, MouseEventArgs e)
+        {
+            move = false;
+        }
     }
 }

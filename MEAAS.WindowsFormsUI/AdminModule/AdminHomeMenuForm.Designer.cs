@@ -182,6 +182,9 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.Text = "HomeForm";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.AdminHomeMenuForm_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminHomeMenuForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminHomeMenuForm_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AdminHomeMenuForm_MouseUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
