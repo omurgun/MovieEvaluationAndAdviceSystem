@@ -35,5 +35,12 @@ namespace MEAAS.WindowsFormsUI.AdminModule
         {
             Application.Exit();
         }
+
+        private void BtnMovieCategory_Click(object sender, EventArgs e)
+        {
+            AdminMovieCategoryForm adminMovieCategoryForm = new AdminMovieCategoryForm();
+            adminMovieCategoryForm.Show();
+            this.Hide();
+        }
     }
 }

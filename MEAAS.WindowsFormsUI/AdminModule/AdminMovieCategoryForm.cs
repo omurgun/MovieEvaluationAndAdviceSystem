@@ -26,6 +26,43 @@ namespace MEAAS.WindowsFormsUI.AdminModule
 
         }
 
+        private void btnRemoveMovie_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddMovie_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdateMovie_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdateMovieCategory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRemoveMovieCategory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            AdminHomeMenuForm adminHomeMenuForm = new AdminHomeMenuForm();
+            adminHomeMenuForm.Show();
+            this.Hide();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         //private void BtnAddMovieCategory_Click(object sender, EventArgs e)
         //{
         //    try

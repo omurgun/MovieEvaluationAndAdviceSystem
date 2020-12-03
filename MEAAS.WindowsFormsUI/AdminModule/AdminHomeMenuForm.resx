@@ -117,20 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="btnMovie.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="btnUser.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="BtnExit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="BtnExit.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAAPEAAADxATkMDOQAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAAB5ElEQVRYR8WXSU7FMAyG3wZYswDENeB8DPdguAICCQ7CvHwgWDCIBReA/6vqqs8vaYYW8Uu/1DiO
-        7ThD41kPK+Kh+Cx+iifiujgW2DgVsYltfOBrAavimfjj+CBui7XYFG9Eb/dKXBMbEM25aJ3f4kuvfSti
-        qBRb4p1odrCJbWvjs8kEKTHhl7grMvi+lcHSILxzvpFhGx8m3xebdaFBdCgYQkEgSyHm3IAPy8QcwUfb
-        IEXegTeWCiLlHNB+Fel/Q8BuTw3ICcLrxWz1s3okNsckZ+BQEL4/xzk63TH3x+VR9McvppM7lqBNJ3i8
-        c2fhdWrGeJ0ONZlI6SZn7lETRI5O0a2akzbaFyI3WqgvO+0x5MwyhFEz9ygNYlLnBp/OSzEG+kyvKu0h
-        /GsAY5cgd98EUWtskiB82rnDfTppk3IY6uuPL1qOnBlMpbOEGsMluoNB+LTF0u5Tm0p1aIzXqZq5XTI1
-        Yxd0/IMkd+Z9Hb77f73QLEM2mgcJRYMJa5wbkJUGcSwWPUpjzg305QRhdcc7gqFneYlzQyqIpWf5QduA
-        FA07Yq1zA5suFIQvTPbEZGlW6tzgg4iWZoCPvyhON8Rr0dvl+u6KUwNBUKuxLmwOiobu3T4C2GC3s9mf
-        RJa8nfls9gvFKn9pCrHVTwAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        8QAAAPEBOQwM5AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHkSURBVFhHxZdJ
+        TsUwDIbfBlizAMQ14HwM92C4AgIJDsK8fCBYMIgFF4D/q+qqzy9phhbxS7/UOI7tOEPjWQ8r4qH4LH6K
+        J+K6OBbYOBWxiW184GsBq+KZ+OP4IG6LtdgUb0Rv90pcExsQzblond/iS699K2KoFFvinWh2sIlta+Oz
+        yQQpMeGXuCsy+L6VwdIgvHO+kWEbHybfF5t1oUF0KBhCQSBLIebcgA/LxBzBR9sgRd6BN5YKIuUc0H4V
+        6X9DwG5PDcgJwuvFbPWzeiQ2xyRn4FAQvj/HOTrdMffH5VH0xy+mkzuWoE0neLxzZ+F1asZ4nQ41mUjp
+        JmfuURNEjk7RrZqTNtoXIjdaqC877THkzDKEUTP3KA1iUucGn85LMQb6TK8q7SH8awBjlyB33wRRa2yS
+        IHzaucN9OmmTchjq648vWo6cGUyls4QawyW6g0H4tMXS7lObSnVojNepmrldMjVjF3T8gyR35n0dvvt/
+        vdAsQzaaBwlFgwlrnBuQlQZxLBY9SmPODfTlBGF1xzuCoWd5iXNDKoilZ/lB24AUDTtirXMDmy4UhC9M
+        9sRkaVbq3OCDiJZmgI+/KE43xGvR2+X67opTA0FQq7EubA6Khu7dPgLYYLez2Z9Elryd+Wz2C8Uqf2kK
+        sdVPAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="btnMovieCategory.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

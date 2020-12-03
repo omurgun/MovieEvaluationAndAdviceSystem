@@ -35,6 +35,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.btnMovie = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
+            this.btnMovieCategory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnMovie
@@ -47,7 +48,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.btnMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMovie.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnMovie.ForeColor = System.Drawing.Color.Black;
-            this.btnMovie.Location = new System.Drawing.Point(131, 188);
+            this.btnMovie.Location = new System.Drawing.Point(125, 124);
             this.btnMovie.Name = "btnMovie";
             this.btnMovie.Size = new System.Drawing.Size(388, 100);
             this.btnMovie.TabIndex = 0;
@@ -64,7 +65,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUser.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUser.ForeColor = System.Drawing.Color.Black;
-            this.btnUser.Location = new System.Drawing.Point(131, 366);
+            this.btnUser.Location = new System.Drawing.Point(125, 256);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(388, 100);
             this.btnUser.TabIndex = 1;
@@ -87,12 +88,30 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.BtnExit.UseVisualStyleBackColor = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
+            // btnMovieCategory
+            // 
+            this.btnMovieCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(171)))), ((int)(((byte)(12)))));
+            this.btnMovieCategory.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnMovieCategory.FlatAppearance.BorderSize = 3;
+            this.btnMovieCategory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(105)))), ((int)(((byte)(189)))));
+            this.btnMovieCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMovieCategory.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnMovieCategory.ForeColor = System.Drawing.Color.Black;
+            this.btnMovieCategory.Location = new System.Drawing.Point(125, 386);
+            this.btnMovieCategory.Name = "btnMovieCategory";
+            this.btnMovieCategory.Size = new System.Drawing.Size(388, 100);
+            this.btnMovieCategory.TabIndex = 4;
+            this.btnMovieCategory.Text = "Movie Category";
+            this.btnMovieCategory.UseVisualStyleBackColor = false;
+            this.btnMovieCategory.Click += new System.EventHandler(this.BtnMovieCategory_Click);
+            // 
             // AdminHomeMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(650, 650);
+            this.Controls.Add(this.btnMovieCategory);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.btnUser);
             this.Controls.Add(this.btnMovie);
@@ -114,5 +133,6 @@ namespace MEAAS.WindowsFormsUI.AdminModule
         private System.Windows.Forms.Button btnMovie;
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Button BtnExit;
+        private System.Windows.Forms.Button btnMovieCategory;
     }
 }
