@@ -229,7 +229,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgwMovies.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgwMovies.Size = new System.Drawing.Size(1141, 296);
+            this.dgwMovies.Size = new System.Drawing.Size(1142, 294);
             this.dgwMovies.TabIndex = 0;
             this.dgwMovies.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgwMovies_CellClick);
             // 
@@ -375,7 +375,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(193)))));
-            this.ClientSize = new System.Drawing.Size(1164, 667);
+            this.ClientSize = new System.Drawing.Size(1165, 665);
             this.Controls.Add(this.btnRemoveMovie);
             this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.BtnExit);

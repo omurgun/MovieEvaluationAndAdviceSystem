@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using MEAAS.Business.Abstract;
 using MEAAS.Business.DependencyResolvers.Ninject;
 using MEAAS.Entities.Concrete;
+using MEAAS.WindowsFormsUI.HomeModule;
 
 namespace MEAAS.WindowsFormsUI.AdminModule
 {
@@ -23,77 +24,31 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             dgwUsers.DataSource = _userService.GetAllUsers();
         }
 
-        private void BtnAdd_Click(object sender, EventArgs e)
+        private void TbxSearch_TextChanged(object sender, EventArgs e)
         {
-            try
+            if (!String.IsNullOrEmpty(tbxSearch.Text))
             {
-                var firstName = tbxFirstName.Text;
-                var lastName = tbxLastName.Text;
-                var email = tbxEmail.Text;
-                var gender="";
-                if (rbnMale.Checked==true)
-                {
-                    gender = "Male";
-                }
-                else
-                {
-                    gender = "Female";
-                }
-                var userName = tbxUsername.Text;
-                var password = tbxPassword.Text;
-
-
-                if (firstName == string.Empty || lastName == string.Empty || email == string.Empty || userName == string.Empty || password == string.Empty)
-                {
-                    MessageBox.Show(@"can't be blank");
-                }
-                else
-                {
-                    var user = _userService.GetUserByUserName(userName);
-                    if (user == null)
-                    {
-                        var savedUser = _userService.AddUser(new User
-                        {
-                            UserFirstName = firstName,
-                            UserLastName = lastName,
-                            UserGender = gender,
-                            UserEmail = email,
-                            UserName = userName,
-                            UserPassword = password
-                        });
-                        if (savedUser != null)
-                        {
-                            LoadUsers();
-                            tbxFirstName.Text = "";
-                            tbxLastName.Text = "";
-                            tbxEmail.Text = "";
-                            tbxUsername.Text = "";
-                            tbxPassword.Text = "";
-                            rbnMale.Checked = false;
-                            rbnFemale.Checked = false;
-
-
-                            MessageBox.Show(@"new user added.");
-                        }
-                        else
-                        {
-                            MessageBox.Show(@"Couldn't add new user!!");
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show(@"this user has already been added");
-                    }
-                }
-
+                dgwUsers.DataSource = _userService.GetUsersByUserName(tbxSearch.Text);
             }
-            catch (Exception exception)
+            else
             {
-                MessageBox.Show(exception.Message);
+                LoadUsers();
             }
         }
 
-        private void BtnUpdate_Click(object sender, EventArgs e)
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            HomeForm homeForm = new HomeForm();
+            homeForm.Show();
+            this.Hide();
+        }
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+       
+        private void BtnUpdateUser_Click(object sender, EventArgs e)
         {
             try
             {
@@ -157,28 +112,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             }
         }
 
-
-        private void DgwProducts_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgwUsers.CurrentRow != null)
-            {
-                tbxUpdateFirstName.Text = dgwUsers.CurrentRow.Cells[2].Value.ToString();
-                tbxUpdateLastName.Text = dgwUsers.CurrentRow.Cells[3].Value.ToString();
-                tbxUpdateEmail.Text = dgwUsers.CurrentRow.Cells[4].Value.ToString();
-                tbxUpdateUserName.Text = dgwUsers.CurrentRow.Cells[1].Value.ToString();
-                tbxUpdatePassword.Text = dgwUsers.CurrentRow.Cells[6].Value.ToString();
-                if (dgwUsers.CurrentRow.Cells[5].Value.ToString() =="Male")
-                {
-                    rbnUpdateMale.Checked = true;
-                    
-                }
-                else
-                {
-                    rbnUpdateFemale.Checked = true;
-                }
-            }
-        }
-        private void TbxRemove_Click(object sender, EventArgs e)
+        private void BtnRemoveUser_Click(object sender, EventArgs e)
         {
             if (dgwUsers.CurrentRow != null)
             {
@@ -193,19 +127,96 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             {
                 MessageBox.Show(@"Please Select User!");
             }
-               
-            
         }
 
-        private void TbxSearch_TextChanged(object sender, EventArgs e)
+        private void BtnAddUser_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(tbxSearch.Text))
+            try
             {
-                dgwUsers.DataSource = _userService.GetUsersByUserName(tbxSearch.Text);
+                var firstName = tbxFirstName.Text;
+                var lastName = tbxLastName.Text;
+                var email = tbxEmail.Text;
+                var gender = "";
+                if (rbnMale.Checked == true)
+                {
+                    gender = "Male";
+                }
+                else
+                {
+                    gender = "Female";
+                }
+                var userName = tbxUsername.Text;
+                var password = tbxPassword.Text;
+
+
+                if (firstName == string.Empty || lastName == string.Empty || email == string.Empty || userName == string.Empty || password == string.Empty)
+                {
+                    MessageBox.Show(@"can't be blank");
+                }
+                else
+                {
+                    var user = _userService.GetUserByUserName(userName);
+                    if (user == null)
+                    {
+                        var savedUser = _userService.AddUser(new User
+                        {
+                            UserFirstName = firstName,
+                            UserLastName = lastName,
+                            UserGender = gender,
+                            UserEmail = email,
+                            UserName = userName,
+                            UserPassword = password
+                        });
+                        if (savedUser != null)
+                        {
+                            LoadUsers();
+                            tbxFirstName.Text = "";
+                            tbxLastName.Text = "";
+                            tbxEmail.Text = "";
+                            tbxUsername.Text = "";
+                            tbxPassword.Text = "";
+                            rbnMale.Checked = false;
+                            rbnFemale.Checked = false;
+
+
+                            MessageBox.Show(@"new user added.");
+                        }
+                        else
+                        {
+                            MessageBox.Show(@"Couldn't add new user!!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(@"this user has already been added");
+                    }
+                }
+
             }
-            else
+            catch (Exception exception)
             {
-                LoadUsers();
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        private void dgwUsers_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgwUsers.CurrentRow != null)
+            {
+                tbxUpdateFirstName.Text = dgwUsers.CurrentRow.Cells[2].Value.ToString();
+                tbxUpdateLastName.Text = dgwUsers.CurrentRow.Cells[3].Value.ToString();
+                tbxUpdateEmail.Text = dgwUsers.CurrentRow.Cells[4].Value.ToString();
+                tbxUpdateUserName.Text = dgwUsers.CurrentRow.Cells[1].Value.ToString();
+                tbxUpdatePassword.Text = dgwUsers.CurrentRow.Cells[6].Value.ToString();
+                if (dgwUsers.CurrentRow.Cells[5].Value.ToString() == "Male")
+                {
+                    rbnUpdateMale.Checked = true;
+
+                }
+                else
+                {
+                    rbnUpdateFemale.Checked = true;
+                }
             }
         }
     }
