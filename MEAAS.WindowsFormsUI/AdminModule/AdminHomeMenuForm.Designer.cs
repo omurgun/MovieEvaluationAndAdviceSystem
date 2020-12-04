@@ -87,7 +87,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
             this.BtnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnExit.Location = new System.Drawing.Point(588, 12);
+            this.BtnExit.Location = new System.Drawing.Point(604, 12);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(34, 34);
             this.BtnExit.TabIndex = 3;

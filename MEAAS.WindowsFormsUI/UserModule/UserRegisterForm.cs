@@ -13,13 +13,6 @@ namespace MEAAS.WindowsFormsUI.UserModule
             InitializeComponent();
         }
 
-        private void BtnBack_Click(object sender, EventArgs e)
-        {
-            UserLoginForm userLoginForm = new UserLoginForm();
-            userLoginForm.Show();
-            this.Hide();
-        }
-
         private readonly IUserService _userService = InstanceFactory.GetInstance<IUserService>();
         private void BtnUserRegister_Click(object sender, EventArgs e)
         {
@@ -62,6 +55,7 @@ namespace MEAAS.WindowsFormsUI.UserModule
                         if (savedUser != null)
                         {
                            UserForm userForm = new UserForm();
+                           userForm.lblUserName.Text = userName;
                            userForm.Show();
                            this.Hide();
                         }
@@ -83,5 +77,19 @@ namespace MEAAS.WindowsFormsUI.UserModule
             }
 
         }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            UserLoginForm userLoginForm = new UserLoginForm();
+            userLoginForm.Show();
+            this.Hide();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+       
     }
 }

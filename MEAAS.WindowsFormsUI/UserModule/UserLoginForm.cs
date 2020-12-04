@@ -30,6 +30,7 @@ namespace MEAAS.WindowsFormsUI.UserModule
                 if (user != null)
                 {
                     UserForm userForm = new UserForm();
+                    userForm.lblUserName.Text = userName;
                     userForm.Show();
                     this.Hide();
                 }
@@ -51,6 +52,11 @@ namespace MEAAS.WindowsFormsUI.UserModule
             HomeForm homeForm = new HomeForm();
             homeForm.Show();
             this.Hide();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

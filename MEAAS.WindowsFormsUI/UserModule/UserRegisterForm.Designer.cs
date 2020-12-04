@@ -44,17 +44,18 @@ namespace MEAAS.WindowsFormsUI.UserModule
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblSurname = new System.Windows.Forms.Label();
             this.tbxLastName = new System.Windows.Forms.TextBox();
-            this.btnBack = new System.Windows.Forms.Button();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.btnUserRegister = new System.Windows.Forms.Button();
             this.lblUserRegister = new System.Windows.Forms.Label();
+            this.btnUserRegister = new System.Windows.Forms.Button();
+            this.BtnBack = new System.Windows.Forms.Button();
+            this.BtnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // rbnFemale
             // 
             this.rbnFemale.AutoSize = true;
             this.rbnFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rbnFemale.Location = new System.Drawing.Point(429, 257);
+            this.rbnFemale.Location = new System.Drawing.Point(435, 252);
             this.rbnFemale.Name = "rbnFemale";
             this.rbnFemale.Size = new System.Drawing.Size(149, 43);
             this.rbnFemale.TabIndex = 16;
@@ -66,7 +67,7 @@ namespace MEAAS.WindowsFormsUI.UserModule
             // 
             this.rbnMale.AutoSize = true;
             this.rbnMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rbnMale.Location = new System.Drawing.Point(314, 257);
+            this.rbnMale.Location = new System.Drawing.Point(320, 252);
             this.rbnMale.Name = "rbnMale";
             this.rbnMale.Size = new System.Drawing.Size(109, 43);
             this.rbnMale.TabIndex = 15;
@@ -76,10 +77,10 @@ namespace MEAAS.WindowsFormsUI.UserModule
             // 
             // tbxPassword
             // 
-            this.tbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbxPassword.Location = new System.Drawing.Point(320, 354);
             this.tbxPassword.Name = "tbxPassword";
-            this.tbxPassword.Size = new System.Drawing.Size(258, 45);
+            this.tbxPassword.Size = new System.Drawing.Size(258, 38);
             this.tbxPassword.TabIndex = 14;
             this.tbxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbxPassword.UseSystemPasswordChar = true;
@@ -116,10 +117,10 @@ namespace MEAAS.WindowsFormsUI.UserModule
             // 
             // tbxEmail
             // 
-            this.tbxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbxEmail.Location = new System.Drawing.Point(320, 208);
             this.tbxEmail.Name = "tbxEmail";
-            this.tbxEmail.Size = new System.Drawing.Size(258, 45);
+            this.tbxEmail.Size = new System.Drawing.Size(258, 38);
             this.tbxEmail.TabIndex = 10;
             this.tbxEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -135,19 +136,19 @@ namespace MEAAS.WindowsFormsUI.UserModule
             // 
             // tbxUsername
             // 
-            this.tbxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbxUsername.Location = new System.Drawing.Point(320, 303);
             this.tbxUsername.Name = "tbxUsername";
-            this.tbxUsername.Size = new System.Drawing.Size(258, 45);
+            this.tbxUsername.Size = new System.Drawing.Size(258, 38);
             this.tbxUsername.TabIndex = 6;
             this.tbxUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbxFirstName
             // 
-            this.tbxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbxFirstName.Location = new System.Drawing.Point(320, 114);
             this.tbxFirstName.Name = "tbxFirstName";
-            this.tbxFirstName.Size = new System.Drawing.Size(258, 45);
+            this.tbxFirstName.Size = new System.Drawing.Size(258, 38);
             this.tbxFirstName.TabIndex = 2;
             this.tbxFirstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -173,26 +174,12 @@ namespace MEAAS.WindowsFormsUI.UserModule
             // 
             // tbxLastName
             // 
-            this.tbxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbxLastName.Location = new System.Drawing.Point(320, 162);
             this.tbxLastName.Name = "tbxLastName";
-            this.tbxLastName.Size = new System.Drawing.Size(258, 45);
+            this.tbxLastName.Size = new System.Drawing.Size(258, 38);
             this.tbxLastName.TabIndex = 4;
             this.tbxLastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.Aqua;
-            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.Aqua;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBack.ImageIndex = 0;
-            this.btnBack.ImageList = this.ımageList1;
-            this.btnBack.Location = new System.Drawing.Point(12, 29);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(41, 35);
-            this.btnBack.TabIndex = 16;
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // ımageList1
             // 
@@ -200,39 +187,75 @@ namespace MEAAS.WindowsFormsUI.UserModule
             this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.ımageList1.Images.SetKeyName(0, "left-arrow.png");
             // 
-            // btnUserRegister
-            // 
-            this.btnUserRegister.BackColor = System.Drawing.Color.Aqua;
-            this.btnUserRegister.FlatAppearance.BorderColor = System.Drawing.Color.Aqua;
-            this.btnUserRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUserRegister.Location = new System.Drawing.Point(199, 425);
-            this.btnUserRegister.Name = "btnUserRegister";
-            this.btnUserRegister.Size = new System.Drawing.Size(250, 100);
-            this.btnUserRegister.TabIndex = 18;
-            this.btnUserRegister.Text = "Register";
-            this.btnUserRegister.UseVisualStyleBackColor = false;
-            this.btnUserRegister.Click += new System.EventHandler(this.BtnUserRegister_Click);
-            // 
             // lblUserRegister
             // 
             this.lblUserRegister.AutoSize = true;
             this.lblUserRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUserRegister.Location = new System.Drawing.Point(127, 29);
+            this.lblUserRegister.Location = new System.Drawing.Point(63, 27);
             this.lblUserRegister.Name = "lblUserRegister";
             this.lblUserRegister.Size = new System.Drawing.Size(480, 63);
             this.lblUserRegister.TabIndex = 17;
             this.lblUserRegister.Text = "USER REGISTER";
             // 
+            // btnUserRegister
+            // 
+            this.btnUserRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(68)))));
+            this.btnUserRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnUserRegister.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnUserRegister.FlatAppearance.BorderSize = 3;
+            this.btnUserRegister.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(153)))), ((int)(((byte)(199)))));
+            this.btnUserRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserRegister.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUserRegister.ForeColor = System.Drawing.Color.Black;
+            this.btnUserRegister.Location = new System.Drawing.Point(164, 414);
+            this.btnUserRegister.Name = "btnUserRegister";
+            this.btnUserRegister.Size = new System.Drawing.Size(265, 65);
+            this.btnUserRegister.TabIndex = 26;
+            this.btnUserRegister.Text = "Register";
+            this.btnUserRegister.UseVisualStyleBackColor = false;
+            this.btnUserRegister.Click += new System.EventHandler(this.BtnUserRegister_Click);
+            // 
+            // BtnBack
+            // 
+            this.BtnBack.BackColor = System.Drawing.Color.Transparent;
+            this.BtnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnBack.BackgroundImage")));
+            this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBack.Location = new System.Drawing.Point(12, 12);
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.Size = new System.Drawing.Size(34, 34);
+            this.BtnBack.TabIndex = 28;
+            this.BtnBack.UseVisualStyleBackColor = false;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
+            // 
+            // BtnExit
+            // 
+            this.BtnExit.BackColor = System.Drawing.Color.Transparent;
+            this.BtnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnExit.BackgroundImage")));
+            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExit.Location = new System.Drawing.Point(554, 12);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(34, 34);
+            this.BtnExit.TabIndex = 27;
+            this.BtnExit.UseVisualStyleBackColor = false;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
             // UserRegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
-            this.ClientSize = new System.Drawing.Size(634, 561);
-            this.Controls.Add(this.rbnFemale);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.rbnMale);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(57)))), ((int)(((byte)(116)))));
+            this.ClientSize = new System.Drawing.Size(600, 500);
+            this.Controls.Add(this.BtnBack);
+            this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.btnUserRegister);
+            this.Controls.Add(this.rbnFemale);
+            this.Controls.Add(this.rbnMale);
             this.Controls.Add(this.tbxPassword);
             this.Controls.Add(this.lblUserRegister);
             this.Controls.Add(this.label3);
@@ -248,6 +271,7 @@ namespace MEAAS.WindowsFormsUI.UserModule
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "UserRegisterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserRegisterForm";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -268,9 +292,10 @@ namespace MEAAS.WindowsFormsUI.UserModule
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.TextBox tbxLastName;
-        private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnUserRegister;
         private System.Windows.Forms.Label lblUserRegister;
         private System.Windows.Forms.ImageList ımageList1;
+        private System.Windows.Forms.Button btnUserRegister;
+        private System.Windows.Forms.Button BtnBack;
+        private System.Windows.Forms.Button BtnExit;
     }
 }
