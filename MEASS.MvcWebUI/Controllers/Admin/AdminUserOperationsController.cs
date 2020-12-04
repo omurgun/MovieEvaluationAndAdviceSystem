@@ -13,7 +13,6 @@ namespace MEASS.MvcWebUI.Controllers
     public class AdminUserOperationsController : Controller
     {
 
-        private readonly IAdminService _adminService = InstanceFactory.GetInstance<IAdminService>();
         private readonly IUserService _userService = InstanceFactory.GetInstance<IUserService>();
 
 
@@ -23,6 +22,10 @@ namespace MEASS.MvcWebUI.Controllers
             return View();
         }
 
+        public List<User> AllUsers()
+        {
+            return _userService.GetAllUsers();
+        }
         public string AddUser()
         {
             try
@@ -135,7 +138,7 @@ namespace MEASS.MvcWebUI.Controllers
             {
                 _userService.DeleteUser(new User
                 {
-                    Id = 1
+                    Id = 2
                 });
                 return "User Deleted!";
             }
@@ -148,8 +151,7 @@ namespace MEASS.MvcWebUI.Controllers
         }
         public string SearchByUserName()
         {
-            var users = _userService.GetAllUsers();
-            return users.Count.ToString();
+            return _userService.GetUsersByUserName("username").ToString();
         }
     }
 }
