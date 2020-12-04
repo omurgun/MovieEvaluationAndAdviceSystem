@@ -26,8 +26,7 @@ namespace MEAAS.WindowsFormsUI.AdminModule
 
         private void TbxSearch_TextChanged(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(tbxSearch.Text))
-            {
+            if (!String.IsNullOrEmpty(tbxSearch.Text)){
                 dgwUsers.DataSource = _userService.GetUsersByUserName(tbxSearch.Text);
             }
             else
