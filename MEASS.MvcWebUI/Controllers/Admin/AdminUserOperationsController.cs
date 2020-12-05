@@ -22,7 +22,7 @@ namespace MEASS.MvcWebUI.Controllers
             return View();
         }
 
-        public List<User> AllUsers()
+        public List<MEAAS.Entities.Concrete.User> AllUsers()
         {
             return _userService.GetAllUsers();
         }
@@ -47,7 +47,7 @@ namespace MEASS.MvcWebUI.Controllers
                     var user = _userService.GetUserByUserName(userName);
                     if (user == null)
                     {
-                        var savedUser = _userService.AddUser(new User
+                        var savedUser = _userService.AddUser(new MEAAS.Entities.Concrete.User
                         {
                             UserFirstName = firstName,
                             UserLastName = lastName,
@@ -100,7 +100,7 @@ namespace MEASS.MvcWebUI.Controllers
                     var user = _userService.GetUserByUserName(updateUserName);
                     if (user != null)
                     {
-                        var updatedUser = _userService.UpdateUser(new User
+                        var updatedUser = _userService.UpdateUser(new MEAAS.Entities.Concrete.User
                         {
                             Id = user.Id,
                             UserFirstName = updateFirstName,
@@ -136,7 +136,7 @@ namespace MEASS.MvcWebUI.Controllers
         {
             try
             {
-                _userService.DeleteUser(new User
+                _userService.DeleteUser(new MEAAS.Entities.Concrete.User
                 {
                     Id = 2
                 });
