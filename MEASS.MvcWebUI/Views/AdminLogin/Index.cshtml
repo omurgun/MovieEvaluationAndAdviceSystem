@@ -1,7 +1,17 @@
 ﻿@{
     ViewBag.Title = "Admin Login Page";
+    Layout = null;
 }
 
-<div class="jumbotron">
-    <h1>Admin Login Page</h1>
+<link href="@Url.Content("~/Content/AdminLogin.css")" rel="stylesheet" type="text/css" />
+
+<h2>Login Form</h2>
+<div>
+    <form action="/AdminLogin/Login" method="post">
+        <div class="container">
+            <input type="text" placeholder="Enter Username" name="AdminName" required>
+            <input type="password" placeholder="Enter Password" name="AdminPassword" required>
+            <button type="submit">Login</button>
+        </div>
+    </form>
 </div>
